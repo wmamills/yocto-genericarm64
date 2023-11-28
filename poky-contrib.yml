@@ -1,0 +1,33 @@
+header:
+  version: 9
+
+build_system: oe
+distro: poky
+
+defaults:
+  repos:
+    refspec: master
+
+repos:
+  layers/poky-contrib:
+    url: https://git.yoctoproject.org/git/poky-contrib
+    refspec: ross/genericarm64
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+env:
+  BB_LOGCONFIG: ""
+  TOOLCHAIN_DIR: ""
+
+local_conf_header:
+  base: |
+    CONF_VERSION = "2"
+    #PACKAGECONFIG:remove:pn-qemu-system-native = "gtk+ sdl"
+    #EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-openssh"
+    #PACKAGE_INSTALL_EXTRAS = "rsync iproute2 kernel-modules"
+    #IMAGE_INSTALL:append = " ${PACKAGE_INSTALL_EXTRAS} "
+    USER_CLASSES ?= "buildstats"
+
+machine: unset
