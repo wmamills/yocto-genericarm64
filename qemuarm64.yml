@@ -1,0 +1,9 @@
+header:
+  version: 9
+  includes:
+    - poky.yml
+
+machine: qemuarm64
+
+target:
+  - core-image-base
