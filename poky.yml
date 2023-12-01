@@ -12,9 +12,9 @@ repos:
   layers/poky:
     url: https://git.yoctoproject.org/git/poky
     # master as of 2023-11-30
-    # refspec: d069eb3af4f8a20ca4bad84b5e529e92d152ccef
+    refspec: d069eb3af4f8a20ca4bad84b5e529e92d152ccef
     # master as of 2023-10-05
-    refspec: 2b9044361f2855866eed831f8bdb770f2c7d42dc
+    # refspec: 2b9044361f2855866eed831f8bdb770f2c7d42dc
     layers:
       meta:
       meta-poky:
@@ -27,6 +27,8 @@ env:
 local_conf_header:
   base: |
     CONF_VERSION = "2"
+    BB_NUMBER_THREADS = "8"
+    PARALLEL_MAKE = "-j 8"
     #PACKAGECONFIG:remove:pn-qemu-system-native = "gtk+ sdl"
     #EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-openssh"
     #PACKAGE_INSTALL_EXTRAS = "rsync iproute2 kernel-modules"
