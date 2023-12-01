@@ -27,8 +27,8 @@ env:
 local_conf_header:
   base: |
     CONF_VERSION = "2"
-    BB_NUMBER_THREADS = "8"
-    PARALLEL_MAKE = "-j 8"
+    BB_NUMBER_THREADS = "32"
+    PARALLEL_MAKE = "-j 16"
     #PACKAGECONFIG:remove:pn-qemu-system-native = "gtk+ sdl"
     #EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-openssh"
     #PACKAGE_INSTALL_EXTRAS = "rsync iproute2 kernel-modules"
