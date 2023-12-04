@@ -1,7 +1,7 @@
 header:
   version: 9
   includes:
-    - poky.yml
+    - poky-contrib.yml
 
 machine: qemuarm64
 
