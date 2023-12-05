@@ -13,9 +13,9 @@ repos:
     url: https://git.yoctoproject.org/git/poky-contrib
     # refspec: ross/genericarm64
     # JPEW fix
-    # refspec:  264b8d564848590c1a4670b7468e0ca5b5092387
+    refspec:  264b8d564848590c1a4670b7468e0ca5b5092387
     # Commit before JPEW's fix
-    refspec: 1f8a639a67a192fa06cef15018a5cd5f7f94a602
+    #refspec: 1f8a639a67a192fa06cef15018a5cd5f7f94a602
     layers:
       meta:
       meta-poky:
@@ -33,5 +33,6 @@ local_conf_header:
     #PACKAGE_INSTALL_EXTRAS = "rsync iproute2 kernel-modules"
     #IMAGE_INSTALL:append = " ${PACKAGE_INSTALL_EXTRAS} "
     USER_CLASSES ?= "buildstats"
+    BB_SIGNATURE_HANDLER = "OEBasicHash"
 
 machine: unset
