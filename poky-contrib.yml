@@ -33,6 +33,6 @@ local_conf_header:
     #PACKAGE_INSTALL_EXTRAS = "rsync iproute2 kernel-modules"
     #IMAGE_INSTALL:append = " ${PACKAGE_INSTALL_EXTRAS} "
     USER_CLASSES ?= "buildstats"
-    BB_SIGNATURE_HANDLER = "OEBasicHash"
+    #BB_SIGNATURE_HANDLER = "OEBasicHash"
 
 machine: unset
