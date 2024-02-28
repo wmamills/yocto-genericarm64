@@ -11,8 +11,10 @@ defaults:
 repos:
   layers/poky:
     url: https://git.yoctoproject.org/git/poky
+    # Head commit in master-next as of 2024-02-28 at 11:43:39 PM UTC
+    refspec: 63f4284e347ab2bd75ec5d63d6dadb8bc64c12f3
     # master as of 2023-11-30
-    refspec: d069eb3af4f8a20ca4bad84b5e529e92d152ccef
+    # refspec: d069eb3af4f8a20ca4bad84b5e529e92d152ccef
     # master as of 2023-10-05
     # refspec: 2b9044361f2855866eed831f8bdb770f2c7d42dc
     layers:

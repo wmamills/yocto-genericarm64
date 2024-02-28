@@ -1,9 +1,9 @@
 header:
   version: 9
   includes:
-    - poky-contrib.yml
+    - poky.yml
 
-machine: generic-arm64
+machine: genericarm64
 
 target:
   - core-image-base
