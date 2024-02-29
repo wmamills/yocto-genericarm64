@@ -31,12 +31,6 @@ local_conf_header:
     CONF_VERSION = "2"
     DISTRO = "poky-altcfg"
     EXTRA_IMAGE_FEATURES:append = " debug-tweaks"
-    #BB_NUMBER_THREADS = "32"
-    #PARALLEL_MAKE = "-j 16"
-    #PACKAGECONFIG:remove:pn-qemu-system-native = "gtk+ sdl"
-    #EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-openssh"
-    #PACKAGE_INSTALL_EXTRAS = "rsync iproute2 kernel-modules"
-    #IMAGE_INSTALL:append = " ${PACKAGE_INSTALL_EXTRAS} "
     USER_CLASSES ?= "buildstats"
 
 machine: unset
