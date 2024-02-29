@@ -30,6 +30,7 @@ local_conf_header:
   base: |
     CONF_VERSION = "2"
     DISTRO = "poky-altcfg"
+    EXTRA_IMAGE_FEATURES:append = " debug-tweaks"
     #BB_NUMBER_THREADS = "32"
     #PARALLEL_MAKE = "-j 16"
     #PACKAGECONFIG:remove:pn-qemu-system-native = "gtk+ sdl"
