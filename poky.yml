@@ -45,7 +45,7 @@ local_conf_header:
   base: |
     CONF_VERSION = "2"
     DISTRO = "poky-altcfg"
-    EXTRA_IMAGE_FEATURES:append = " debug-tweaks"
+    EXTRA_IMAGE_FEATURES:append = " allow-empty-password"
     USER_CLASSES ?= "buildstats"
 
 machine: unset
