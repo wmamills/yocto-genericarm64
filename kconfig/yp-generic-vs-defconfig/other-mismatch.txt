@@ -1,0 +1,1 @@
+CONFIG_MMC_BLOCK_MINORS                                     MISMATCH got=8 wanted=32
