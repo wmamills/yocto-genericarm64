@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# Compare the "result" config to an input config file
+# can be used to make sure all configs worked
+#   $ make defconfig my.config
+#   $ compare-kconfig arch/arm64/configs/my.config
+# can be used before applying the input config to see which are redundant
+#   $ make defconfig
+#   $ compare-kconfig arch/arm64/configs/my.config
+
+GOAL=$1
+RESULT=${2:-.}
+FILTER=${3:-.}
+
+# use current dir if KBUILD_OUTPUT not set
+: ${KBUILD_OUTPUT:=.}
+
+if [ -z "$GOAL" ]; then
+    echo "usage: $0 <input config>  [<result config>|.] [<filter>]"
+    echo "where input config is a kconfig fragment (or full config)"
+    echo "      result config is the resulting config"
+    echo "          uses current .config if not specified or specified as ."
+    echo "      filter is any grep expression to limit the comparison"
+    echo "          if not specified, all of input config will be compared"
+    exit 1
+fi
+
+# If RESULT file not specified or specified as "." use the current config
+if [ "$RESULT" == "." ]; then
+    RESULT=${KBUILD_OUTPUT}/.config
+fi
+
+if [ ! -r $GOAL ]; then
+    echo "Can't read input config file $GOAL"
+    exit 2
+fi
+
+if [ ! -r $RESULT ]; then
+    echo "Can't read result config file $RESULT"
+    exit 2
+fi
+
+TMP_FILE=$(mktemp)
+
+# Note: default filer os "." already filters out blank lines
+grep $FILTER $GOAL | grep -v "^#" >$TMP_FILE
+
+while read line; do
+    var="${line%%=*}"
+    val="${line#*=}"
+    result_line=$(grep "${var}=" $RESULT)
+    result_val="${result_line#*=}"
+    printf "%-59s " $var
+    if [ -z "$result_val" ]; then
+        echo "MISSING! ($val)"
+    elif [ "$result_val" == "$val" ]; then
+        echo "OK       ($val)"
+    else
+        echo "MISMATCH got=$result_val wanted=$val"
+    fi
+done <$TMP_FILE
+
+rm $TMP_FILE
