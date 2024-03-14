@@ -1,0 +1,33 @@
+#####
+# This example show how this project can be integrated with Bill's prjtool family
+# of tools/helper scripts.
+#
+# These tools are work in progress and may not be ready to be used by others yet
+# but Bill uses them every day.
+#
+# This project uses remote-build (with associated oe-results helper).
+# This script pushes the current HEAD to a remote machine, runs kas build, and
+# gets the results back.
+#
+# remote-build and others can be found here:
+# https://github.com/wmamills/cloudbuild
+#
+#####
+# This is an example file and won't be used unless renamed w/o the .example suffix
+# 
+# put settings you don't want recorded in git in
+# ./.prjinfo/local/setenv
+#####
+
+# for remote-build tool
+: ${REMOTE_NAME:=my-remote-build-machine}
+: ${REMOTE_DIR_BASE:=big-fs}
+: ${OE_BRANCH:=master}
+: ${PRJ_NAME:=yp-generic-arm64}
+: ${PRJ_SETUP_SCRIPT:=scripts/host-setup.sh}
+: ${REMOTE_DIR:=$REMOTE_DIR_BASE/$PRJ_NAME/$OE_BRANCH/$BUILD_CONFIG}
+: ${OE_RESULT_ACTION:=rsync}
+: ${OE_RESULT_PARTS:=conf build-logs deploy}
+: ${OUTPUT_DIR_BASE:=build-$(date +%Y-%m-%d-%H-%M-%S)}
+: ${OUTPUT_LINK:=build-${BUILD_CONFIG}-latest}
+: ${OUTPUT_DIR:=$OUTPUT_DIR_BASE}
