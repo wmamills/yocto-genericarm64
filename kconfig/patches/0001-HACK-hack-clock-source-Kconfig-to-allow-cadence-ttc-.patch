@@ -1,0 +1,30 @@
+From 1a1f94ac5f0313fd7c64e71583eeeb63428ad3d9 Mon Sep 17 00:00:00 2001
+From: Bill Mills <bill.mills@linaro.org>
+Date: Wed, 13 Mar 2024 11:18:18 -0400
+Subject: [PATCH] HACK: hack clock source Kconfig to allow cadence-ttc timer
+
+Right now this can't be turned on in v6.6 w/o compile test.
+Hack it so we can turn it on.
+Even with this built in, pwm-fan does not complete probe.
+
+Signed-off-by: Bill Mills <bill.mills@linaro.org>
+---
+ drivers/clocksource/Kconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/clocksource/Kconfig b/drivers/clocksource/Kconfig
+index 0ba0dc4ecf06..bbc9a5cb04b9 100644
+--- a/drivers/clocksource/Kconfig
++++ b/drivers/clocksource/Kconfig
+@@ -181,7 +181,7 @@ config NPCM7XX_TIMER
+ 	  where TIMER0 serves as clockevent and TIMER1 serves as clocksource.
+ 
+ config CADENCE_TTC_TIMER
+-	bool "Cadence TTC timer driver" if COMPILE_TEST
++	bool "Cadence TTC timer driver"
+ 	depends on COMMON_CLK
+ 	help
+ 	  Enables support for the Cadence TTC driver.
+-- 
+2.34.1
+
