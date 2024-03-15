@@ -45,7 +45,9 @@ local_conf_header:
   base: |
     CONF_VERSION = "2"
     DISTRO = "poky-altcfg"
-    EXTRA_IMAGE_FEATURES:append = " empty-root-password"
+    IMAGE_FSTYPES:append = " tar.gz"
+    EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-dropbear"
+    IMAGE_INSTALL:append = " mtd-utils rng-tools alsa-utils-speakertest"
     USER_CLASSES ?= "buildstats"
 
 machine: unset
