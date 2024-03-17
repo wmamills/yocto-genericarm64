@@ -31,3 +31,7 @@
 : ${OUTPUT_DIR_BASE:=build-$(date +%Y-%m-%d-%H-%M-%S)}
 : ${OUTPUT_LINK:=build-${BUILD_CONFIG}-latest}
 : ${OUTPUT_DIR:=$OUTPUT_DIR_BASE}
+: ${DEPLOY_TFTP_DIR:=~/srv/tftp/kv260-genericarm64/yp-genericarm64-latest}
+
+# the post-build.sh needs to see this var
+export DEPLOY_TFTP_DIR

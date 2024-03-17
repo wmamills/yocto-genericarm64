@@ -6,9 +6,10 @@ bootargs=ABC=123
 prefix1=kv260-genericarm64/
 
 # choose kernel and initrd source
-prefix2=kv260-genericarm64/defconfig/
-#prefix2=kv260-genericarm64/k-genericarm64-v3/
 #prefix2=kv260-genericarm64/xilinx-6.1/
+#prefix2=kv260-genericarm64/defconfig/
+#prefix2=kv260-genericarm64/k-genericarm64-v3/
+prefix2=kv260-genericarm64/yp-genericarm64-latest/
 
 kernel_addr_r=00200000
 fdt_addr_r=00100000
