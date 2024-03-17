@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Nothing to do on host side of remote build
+if [ x"$CONTEXT" == x"host" ]; then
+    exit 0
+fi
+
 echo "pre-build for PWD=$PWD"
 if [ -d build ]; then
     cd build
