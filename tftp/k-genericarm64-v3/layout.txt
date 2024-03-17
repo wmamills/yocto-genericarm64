@@ -1,0 +1,9 @@
+ 74048554      4 drwxrwxr-x   2 bill     bill         4096 Mar 17 14:37 .
+ 73929167      4 lrwxrwxrwx   1 bill     bill           75 Mar 15 16:53 ./Image-genericarm64.bin -> Image--6.6.20+git0+697bc67e12_a04baee60b-r0-genericarm64-20240315201544.bin
+ 73928303      0 -rw-rw-r--   1 bill     bill            0 Mar 17 14:37 ./layout.txt
+ 73928307  61788 -rw-r--r--   1 bill     bill     63267484 Mar 15 17:31 ./core-image-base-genericarm64.rootfs.tar.gz
+ 73928965  36248 -rw-r--r--   1 bill     bill     37116416 Mar 15 16:53 ./Image--6.6.20+git0+697bc67e12_a04baee60b-r0-genericarm64-20240315201544.bin
+ 73929170      0 lrwxrwxrwx   1 bill     bill           27 Mar 16 11:24 ./make-targets-helper -> ../make-targets-helper-core
+ 73928302   1080 -rw-r--r--   1 bill     bill      1103482 Mar 14 19:18 ./kernel-dev-6.6.20+git0+697bc67e12_a04baee60b-r0.genericarm64.rpm
+ 73928924      4 lrwxrwxrwx   1 bill     bill           75 Mar 15 16:53 ./Image -> Image--6.6.20+git0+697bc67e12_a04baee60b-r0-genericarm64-20240315201544.bin
+ 73929166 282212 -rw-r--r--   1 bill     bill     288978382 Mar 15 16:53 ./modules-genericarm64.tgz

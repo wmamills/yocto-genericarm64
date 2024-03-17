@@ -1,0 +1,33 @@
+# Master uEnv.txt file
+
+#bootargs=earlycon clk_ignore_unused root=/dev/mmcblk0p2 ro rootwait earlyprintk debug uio_pdrv_genirq.of_id=generic-uio
+bootargs=ABC=123
+
+prefix1=kv260-genericarm64/
+
+# choose kernel and initrd source
+prefix2=kv260-genericarm64/defconfig/
+#prefix2=kv260-genericarm64/k-genericarm64-v3/
+#prefix2=kv260-genericarm64/xilinx-6.1/
+
+kernel_addr_r=00200000
+fdt_addr_r=00100000
+ramdisk_addr_r=04000000
+
+# DTB choice, None == use dtb from boot firmware
+#dtb_name=../xilinx-6.1/system.dtb
+#dtb_name=../dtb-v6.6-stock/zynqmp-smk-k26-revA-sck-kv-g-revB.dtb
+dtb_name=../dtb-v6.6-hacked/zynqmp-smk-k26-revA-sck-kv-g-revB.dtb
+#dtb_name=None
+
+kernel_name=Image
+ramdisk_name=initrd.cpio.gz
+
+uenvcmd=\
+tftpboot $kernel_addr_r  ${prefix2}${kernel_name}; \
+tftpboot $fdt_addr_r     ${prefix2}${dtb_name}; \
+\
+# this must be last so filesize is still set below \
+tftpboot $ramdisk_addr_r ${prefix2}${ramdisk_name}; \
+\
+booti $kernel_addr_r $ramdisk_addr_r:$filesize $fdt_addr_r

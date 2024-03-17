@@ -1,0 +1,11 @@
+# this file is used by make-image-targets
+# do not try to run it on its own
+# use: make-image-targets dir
+# where dir is the directory this file is in
+
+# uncomment to keep the working dirs for debug
+#KEEP_DIRS=y
+
+. ../make-targets-helper-lib
+
+ROOTFS_FILE=core-image-base-genericarm64.rootfs.tar.gz
