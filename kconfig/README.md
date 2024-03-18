@@ -23,9 +23,18 @@
   * new configs needed. Not in ross-v2 nor defconfig
 
 ### WIP kv260 config fragments (shotgun turn everything related on)
-* zynqmp-display.config
 * zynqmp-sound.config
+  * Attempt to enable sound
 * zynqmp-v4l2.config
+  * Attempt to enable video input/output/decode
+* zynqmp-broken.config
+  * Things that don't work in v6.6, see comments
+
+## patches
+
+* One patch to hack the Kconfig to allow CADENCE_TTC_TIMER to be enabled.
+Although this patch (and zynqmp-broken.config) got the timer driver enabled,
+the pwm-fan probe still did not complete.
 
 ## Compare Ross v2 to Upstream 6.6.20 defconfig
 
