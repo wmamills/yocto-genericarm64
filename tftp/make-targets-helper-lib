@@ -3,6 +3,11 @@
 # use: make-image-targets dir
 # where dir is the directory this file is in
 
+# defaults
+ROOTFS_FILE=you_must_define_one.tar.gz
+MODULES_KEEP=false
+BOARD=kv260
+
 my-tty() {
     # ensure our tty is enabled
     add-tty ttyPS1
@@ -76,8 +81,15 @@ usr-merge() {
 }
 
 main() {
-    # get common sub routines
-    BOARD=kv260
+    shopt -s nullglob
+
+    if $MODULES_KEEP; then
+        CB_RM_MODULES=""
+        MODULES_CPIO=""
+    else
+        CB_RM_MODULES=cb:rm-modules
+        MODULES_CPIO=$D/modules.cpio.gz
+    fi
 
     D=generated
     DF=../firmware/usr/lib/firmware
@@ -87,21 +99,22 @@ main() {
     # hack the initrd
     new-cpio $D/hacked.cpio.gz \
         $ROOTFS_FILE \
-        cb:add-init-symlink cb:rm-modules cb:usr-merge
+        cb:add-init-symlink $CB_RM_MODULES
 
     # make a cpio of the firmware
     new-cpio $D/firmware.cpio.gz ../firmware cb:usr-merge
 
     # make a cpio of the modules
-    shopt -s nullglob
-    new-cpio $D/modules.cpio.gz modules-*.tar.gz modules-*.tgz kernel-dev*.rpm \
-        cb:trim-modules cb:strip-modules cb:cond-depmod cb:rm-non-modules cb:usr-merge
+    if ! $MODULES_KEEP; then
+        new-cpio $D/modules.cpio.gz modules-*.tar.gz modules-*.tgz kernel-dev*.rpm \
+            cb:trim-modules cb:strip-modules cb:cond-depmod cb:rm-non-modules cb:usr-merge
+    fi
 
     # add any extra stuff
     new-cpio $D/my-extra-stuff.cpio.gz ../my-extra-stuff
 
     # cpio-cat OUTPUT INPUT INPUT ...
     cpio-cat initrd.cpio.gz $D/hacked.cpio.gz \
-        $D/firmware.cpio.gz $D/modules.cpio.gz \
+        $D/firmware.cpio.gz $MODULES_CPIO \
         $D/my-extra-stuff.cpio.gz
 }
