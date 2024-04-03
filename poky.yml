@@ -11,12 +11,16 @@ defaults:
 repos:
   layers/poky:
     # My fork
-    url: https://github.com/wmamills/poky.git
-    refspec: wam-wip
+    # url: https://github.com/wmamills/poky.git
+    # refspec: wam-wip
 
     # master
-    # url: https://git.yoctoproject.org/git/poky
+    url: https://git.yoctoproject.org/git/poky
     # refspec: master
+
+    # Head commit as of April 3 (not taged as 5.0 M4 yet
+    refspec: 30d88a20432d2ddca555c9b6690450b260e523ec
+
     # Head commit in master-next as of 2024-02-28 at 11:43:39 PM UTC
     # refspec: 63f4284e347ab2bd75ec5d63d6dadb8bc64c12f3
     # master as of 2023-11-30
