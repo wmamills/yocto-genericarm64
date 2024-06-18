@@ -83,6 +83,11 @@ usr-merge() {
 main() {
     shopt -s nullglob
 
+    D=generated
+    DF=../firmware/usr/lib/firmware
+    mkdir -p $D
+    mkdir -p $DF
+
     if $MODULES_KEEP; then
         CB_RM_MODULES=""
         MODULES_CPIO=""
@@ -90,11 +95,6 @@ main() {
         CB_RM_MODULES=cb:rm-modules
         MODULES_CPIO=$D/modules.cpio.gz
     fi
-
-    D=generated
-    DF=../firmware/usr/lib/firmware
-    mkdir -p $D
-    mkdir -p $DF
 
     # hack the initrd
     new-cpio $D/hacked.cpio.gz \
