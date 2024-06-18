@@ -3,10 +3,33 @@
 # Compare the "result" config to an input config file
 # can be used to make sure all configs worked
 #   $ make defconfig my.config
-#   $ compare-kconfig arch/arm64/configs/my.config
+#   $ kconfig-compare my.config
 # can be used before applying the input config to see which are redundant
 #   $ make defconfig
-#   $ compare-kconfig arch/arm64/configs/my.config
+#   $ kconfig-compare my.config
+#
+# defconfig's and config fragments can contain explicit not set statements
+# resulting .config files always contain "is not set" statements for every
+# config var it knows about that is not set.
+#
+# By default, the this program looks for explicit not set statements in
+# the goal file and checks the result.
+# This processing can be turned off using --no-net-set if the "goal" is a
+# full result .config as the full list is often not useful
+
+SKIP_NOT_SET=false
+
+while true; do
+    case $1 in
+    --no-not-set)
+        SKIP_NOT_SET=true
+        shift
+        ;;
+    *)
+        break
+        ;;
+    esac
+done
 
 GOAL=$1
 RESULT=${2:-.}
@@ -16,12 +39,15 @@ FILTER=${3:-.}
 : ${KBUILD_OUTPUT:=.}
 
 if [ -z "$GOAL" ]; then
-    echo "usage: $0 <input config>  [<result config>|.] [<filter>]"
+    echo "usage: $0 <options> <input config>  [<result config>|.] [<filter>]"
     echo "where input config is a kconfig fragment (or full config)"
     echo "      result config is the resulting config"
     echo "          uses current .config if not specified or specified as ."
     echo "      filter is any grep expression to limit the comparison"
     echo "          if not specified, all of input config will be compared"
+    echo "and where options is zero or more of:"
+    echo "  --no-not-set    don't look for negative assertions in input"
+    echo "                  example: '# CONFIG_XXX is not set'"
     exit 1
 fi
 
@@ -31,8 +57,12 @@ if [ "$RESULT" == "." ]; then
 fi
 
 if [ ! -r $GOAL ]; then
-    echo "Can't read input config file $GOAL"
-    exit 2
+    if [ -r arch/$ARCH/configs/$GOAL ]; then
+        GOAL="arch/$ARCH/configs/$GOAL"
+    else
+        echo "Can't read input config file $GOAL"
+        exit 2
+    fi
 fi
 
 if [ ! -r $RESULT ]; then
@@ -40,23 +70,79 @@ if [ ! -r $RESULT ]; then
     exit 2
 fi
 
+do_one_line() {
+    var="${line%% is not set*}"
+    var="${var%%=*}"
+    var="${var#\# }"
+    val="${line#$var=}"
+    result_line=$(grep "${var}=" $RESULT)
+    result_val="${result_line#*=}"
+    result_line2=$(grep "^# ${var} is not set" $RESULT)
+    if [ -z "$val" ]; then
+        # must be explicitly not set or we would not be here
+        val="n"
+    fi
+    if [ -z "$result_val" ]; then
+        if [ -z "$result_line2" ]; then
+            # not mentioned
+            result_val="missing"
+        else
+            # explicitly not set
+            result_val="n"
+        fi
+    fi
+}
+
 TMP_FILE=$(mktemp)
 
 # Note: default filer os "." already filters out blank lines
 grep $FILTER $GOAL | grep -v "^#" >$TMP_FILE
 
 while read line; do
-    var="${line%%=*}"
-    val="${line#*=}"
-    result_line=$(grep "${var}=" $RESULT)
-    result_val="${result_line#*=}"
+    do_one_line
     printf "%-59s " $var
-    if [ -z "$result_val" ]; then
-        echo "MISSING! ($val)"
-    elif [ "$result_val" == "$val" ]; then
+    if [ "$result_val" == "$val" ]; then
         echo "OK       ($val)"
     else
-        echo "MISMATCH got=$result_val wanted=$val"
+        case $result_val in
+        "missing")
+            echo "MISSING! ($val)"
+            ;;
+        "n")
+            echo "NOT SET! ($val)"
+            ;;
+        *)
+            echo "MISMATCH got=$result_val wanted=$val"
+            ;;
+        esac
+    fi
+done <$TMP_FILE
+
+rm $TMP_FILE
+
+if $SKIP_NOT_SET; then
+    exit
+fi
+
+TMP_FILE=$(mktemp)
+grep $FILTER $GOAL | grep "^# CONFIG_.* is not set" >$TMP_FILE
+
+while read line; do
+    do_one_line
+    val="n"
+    #echo "var=$var wanted=$val got=$result_val  "
+    printf "%-59s " $var
+    if [ "$result_val" == "$val" ]; then
+        echo "OK       ($val)"
+    else
+        case $result_val in
+        "missing")
+            echo "OK       got=$result_val wanted=$val"
+            ;;
+        *)
+            echo "MISMATCH got=$result_val wanted=$val"
+            ;;
+        esac
     fi
 done <$TMP_FILE
 
