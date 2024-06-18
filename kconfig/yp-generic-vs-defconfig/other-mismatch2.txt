@@ -1,8 +1,0 @@
-CONFIG_CC_VERSION_TEXT                                      MISMATCH got="aarch64-none-linux-gnu-gcc (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 13.2.1 20231009" wanted="aarch64-poky-linux-gcc (GCC) 13.2.0"
-CONFIG_GCC_VERSION                                          MISMATCH got=130201 wanted=130200
-CONFIG_AS_VERSION                                           MISMATCH got=24100 wanted=24200
-CONFIG_LD_VERSION                                           MISMATCH got=24100 wanted=24200
-CONFIG_LOCALVERSION                                         MISMATCH got="" wanted="-yocto-standard"
-CONFIG_NODES_SHIFT                                          MISMATCH got=4 wanted=6
-CONFIG_FUNCTION_ALIGNMENT                                   MISMATCH got=4 wanted=8
-CONFIG_MMC_BLOCK_MINORS                                     MISMATCH got=32 wanted=8

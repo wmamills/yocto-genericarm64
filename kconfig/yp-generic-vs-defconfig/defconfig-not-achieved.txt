@@ -1,0 +1,4 @@
+# compare defconfig to itself
+# these are things defconfig sets that remain off or different in output
+
+CONFIG_IPQ_APSS_5018                                        MISSING! (y)
