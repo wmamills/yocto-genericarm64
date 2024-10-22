@@ -19,7 +19,10 @@ repos:
     #refspec: master
 
     # 5.0.x tip
-    refspec: scarthgap
+    # refspec: scarthgap
+
+    # 5.1 tag
+    refspec: yocto-5.1
 
     # Head commit as of April 3 (not taged as 5.0 M4 yet
     # refspec: 30d88a20432d2ddca555c9b6690450b260e523ec
