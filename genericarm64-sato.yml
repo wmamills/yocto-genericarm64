@@ -1,0 +1,9 @@
+header:
+  version: 9
+  includes:
+    - poky.yml
+
+machine: genericarm64
+
+target:
+  - core-image-sato
