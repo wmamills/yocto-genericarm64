@@ -42,7 +42,7 @@ local_conf_header:
     DISTRO = "poky-altcfg"
     IMAGE_FSTYPES:append = " tar.gz"
     EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-dropbear"
-    IMAGE_INSTALL:append = " mtd-utils rng-tools alsa-utils-speakertest"
+    IMAGE_INSTALL:append = " mtd-utils rng-tools alsa-utils-speakertest kmscube"
     USER_CLASSES ?= "buildstats"
 
 machine: unset
