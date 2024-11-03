@@ -1,16 +1,29 @@
 # How to update the boot firmware on Beagleplay
 
-* Download a emmc flasher from Beagleboard.org such as this one:
-  * https://files.beagle.cc/file/beagleboard-public-2021/images/beagleplay-emmc-flasher-debian-12.2-minimal-arm64-2023-10-07-6gb.img.xz
+## Note: U-boot version 2024.07 is OK for genericarm64
+
+This version is found in Beagleboard.org images of 2024-09-04 or later.
+If you boot your board and find you are booting a older version simply follow the standard update procedure to upgrade.
+YP 5.1 was tested with:
+  * https://files.beagle.cc/file/beagleboard-public-2021/images/beagleplay-emmc-flasher-debian-12.7-minimal-arm64-2024-09-04-8gb.img.xz
+
+
+## If you wish to use a custom version of u-boot
+
+You can use this procedure as an example of how to update the boot firmware
+with a custom version.
+
+* Download a emmc flasher from Beagleboard.org such as the listed above
 
 * write it to SD card in the normal fashion
 
-* remount the SD card's 2 partitions
+* remount the SD card's first and third partitions
   * eject sd from host and reinsert it
   * mount both partitions
 
 * download the replacement boot firmware files from here:
   * https://people.linaro.org/~bill.mills/genericarm64/play-firmware/beagleplay-boot-files.tar.gz
+  * or supply your own in this format
 
 * You must replace 3 files with the versions from the tar file's deploy/ dir.
   ```
@@ -24,7 +37,7 @@
   * In this example the two sd card partitions are mounted as
     ```
            /media/sde1   1st partition aka BOOT
-      and  /media/sde2   2nd partition aka rootfs
+      and  /media/sde3   3rd partition aka rootfs
     ```
 
   * The following sequence of commands would do the update
@@ -33,7 +46,7 @@
   $ rm -rf deploy
   $ tar xvzf beagleplay-boot-files.tar.gz
   $ sudo cp deploy/* /media/sde1/
-  $ sudo cp deploy/* /media/sde2/opt/u-boot/bb-u-boot-beagleplay/
+  $ sudo cp deploy/* /media/sde3/opt/u-boot/bb-u-boot-beagleplay/
   ```
 
   * Each of these copy operations should overwrite 3 files with the new ones.
@@ -59,7 +72,7 @@
 
 * Verify the new U-boot messages are present.
 
-* As of 2024/03/07 the "new" versions you should see are:
+* For the ~bill.mills link above as of 2024/03/07 the "new" versions you should see are:
   ```
   U-Boot SPL 2024.04-rc3-00066-g485bfe1adbb (Mar 06 2024 - 16:28:36 -0600)
   SYSFW ABI: 3.1 (firmware rev 0x0009 '9.2.5--v09.02.05 (Kool Koala)')
