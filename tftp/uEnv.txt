@@ -1,15 +1,17 @@
 # Master uEnv.txt file
 
+# AMD Xilinx build had this command line
 #bootargs=earlycon clk_ignore_unused root=/dev/mmcblk0p2 ro rootwait earlyprintk debug uio_pdrv_genirq.of_id=generic-uio
-bootargs=ABC=123
 
-prefix1=kv260-genericarm64/
+# dummy commandline to test that no options are needed
+#bootargs=ABC=123
+
+# rootfs on a target disk
+bootargs=root=/dev/mmcblk1p3 rootwait rootfstype=ext4
 
 # choose kernel and initrd source
-#prefix2=kv260-genericarm64/xilinx-6.1/
-#prefix2=kv260-genericarm64/defconfig/
-#prefix2=kv260-genericarm64/k-genericarm64-v3/
-prefix2=kv260-genericarm64/yp-genericarm64-latest/
+prefix=kv260-genericarm64/k-korg-6.6-latest/
+#prefix=kv260-genericarm64/yp-genericarm64-latest/
 
 kernel_addr_r=00200000
 fdt_addr_r=00100000
@@ -18,17 +20,18 @@ ramdisk_addr_r=04000000
 # DTB choice, None == use dtb from boot firmware
 #dtb_name=../xilinx-6.1/system.dtb
 #dtb_name=../dtb-v6.6-stock/zynqmp-smk-k26-revA-sck-kv-g-revB.dtb
-dtb_name=../dtb-v6.6-hacked/zynqmp-smk-k26-revA-sck-kv-g-revB.dtb
+#dtb_name=../dtb-v6.6-hacked/zynqmp-smk-k26-revA-sck-kv-g-revB.dtb
+dtb_name=../dtb-v6.11-stock/zynqmp-smk-k26-revA-sck-kv-g-revB.dtb
 #dtb_name=None
 
 kernel_name=Image
 ramdisk_name=initrd.cpio.gz
 
 uenvcmd=\
-tftpboot $kernel_addr_r  ${prefix2}${kernel_name}; \
-tftpboot $fdt_addr_r     ${prefix2}${dtb_name}; \
+tftpboot $kernel_addr_r  ${prefix}${kernel_name}; \
+tftpboot $fdt_addr_r     ${prefix}${dtb_name}; \
 \
 # this must be last so filesize is still set below \
-tftpboot $ramdisk_addr_r ${prefix2}${ramdisk_name}; \
+tftpboot $ramdisk_addr_r ${prefix}${ramdisk_name}; \
 \
 booti $kernel_addr_r $ramdisk_addr_r:$filesize $fdt_addr_r

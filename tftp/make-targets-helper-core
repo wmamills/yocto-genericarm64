@@ -1,3 +1,8 @@
+# this for a YP build deploy dir
+# it uses kernel and modules from current dir
+# it uses a ROOTFS tar file from current dir
+# it builds a custom standalone initrd as rootfs
+
 # this file is used by make-image-targets
 # do not try to run it on its own
 # use: make-image-targets dir

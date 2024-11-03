@@ -1,0 +1,20 @@
+# use kernel and module from current dir but setup to run from disk
+
+# TFTP boot kernel and initrd but intrd will be true initrd
+# root will be on a target disk controlled by udev.txt
+
+# this file is used by make-image-targets
+# do not try to run it on its own
+# use: make-image-targets dir
+# where dir is the directory this file is in
+
+# uncomment to keep the working dirs for debug
+#KEEP_DIRS=y
+
+. ../make-targets-helper-lib
+
+ROOTFS_FILE=../yp-5.1/core-image-initramfs-boot-genericarm64.cpio.gz
+MODULES_KEEP=false
+EXTRAS=../empty
+FIRMWARE=../empty
+HACK_CBS=""

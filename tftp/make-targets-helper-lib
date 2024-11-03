@@ -7,6 +7,10 @@
 ROOTFS_FILE=you_must_define_one.tar.gz
 MODULES_KEEP=false
 BOARD=kv260
+: ${EXTRAS:=../my-extras}
+: ${FIRMWARE:=../firmware}
+: ${HACK_CBS:=cb:add-init-symlink}
+: ${CB_USR_MERGE:=cb:usr-merge}
 
 my-tty() {
     # ensure our tty is enabled
@@ -99,19 +103,19 @@ main() {
     # hack the initrd
     new-cpio $D/hacked.cpio.gz \
         $ROOTFS_FILE \
-        cb:add-init-symlink $CB_RM_MODULES
+        $CB_RM_MODULES $HACK_CB
 
     # make a cpio of the firmware
-    new-cpio $D/firmware.cpio.gz ../firmware cb:usr-merge
+    new-cpio $D/firmware.cpio.gz $FIRMWARE cb:usr-merge
 
     # make a cpio of the modules
     if ! $MODULES_KEEP; then
-        new-cpio $D/modules.cpio.gz modules-*.tar.gz modules-*.tgz kernel-dev*.rpm \
+        new-cpio $D/modules.cpio.gz modules-*.tar.gz modules-*.tgz kernel-dev*.{rpm,ipk} \
             cb:trim-modules cb:strip-modules cb:cond-depmod cb:rm-non-modules cb:usr-merge
     fi
 
     # add any extra stuff
-    new-cpio $D/my-extra-stuff.cpio.gz ../my-extra-stuff
+    new-cpio $D/my-extra-stuff.cpio.gz $EXTRAS
 
     # cpio-cat OUTPUT INPUT INPUT ...
     cpio-cat initrd.cpio.gz $D/hacked.cpio.gz \

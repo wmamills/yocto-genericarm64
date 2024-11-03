@@ -1,3 +1,5 @@
+# use kernel and modules from current dir and make standalone rootfs in initrd
+
 # this file is used by make-image-targets
 # do not try to run it on its own
 # use: make-image-targets dir
@@ -8,5 +10,7 @@
 
 . ../make-targets-helper-lib
 
-ROOTFS_FILE=../openamp-initrd.cpio.gz
+ROOTFS_FILE=../yp-5.1/core-image-base-genericarm64.rootfs.tar.gz
+MODULES_KEEP=false
+
 

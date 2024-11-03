@@ -1,9 +1,0 @@
- 74048430      4 drwxrwxr-x   2 bill     bill         4096 Mar 17 14:36 .
- 73928301      0 -rw-rw-r--   1 bill     bill            0 Mar 17 14:36 ./layout.txt
- 73928322      0 lrwxrwxrwx   1 bill     bill           30 Mar 17 11:53 ./make-targets-helper -> ../make-targets-helper-openamp
- 73928296  15736 -rw-rw-r--   1 bill     bill     16110085 Mar 12 08:45 ./modules-6.6.20.tar.gz
- 73928305  22744 -rw-rw-r--   1 bill     bill     23286646 Mar 17 12:18 ./initrd.cpio.gz
- 73928300  40820 -rw-rw-r--   1 bill     bill     41792000 Mar 12 08:45 ./vmlinuz-6.6.20
- 73928299    280 -rw-rw-r--   1 bill     bill       286688 Mar 12 08:45 ./config-6.6.20
- 73928297   6596 -rw-rw-r--   1 bill     bill      6752548 Mar 12 08:45 ./System.map-6.6.20
- 73928402      0 lrwxrwxrwx   1 bill     bill           14 Mar 12 08:32 ./Image -> vmlinuz-6.6.20

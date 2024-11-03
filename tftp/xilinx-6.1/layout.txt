@@ -1,6 +1,0 @@
- 74244982      4 drwxrwxr-x   2 bill     bill         4096 Mar 17 13:08 .
- 74186856      0 -rw-rw-r--   1 bill     bill            0 Mar 17 13:08 ./layout.txt
- 74186855      0 lrwxrwxrwx   1 bill     bill           30 Mar 17 13:00 ./make-targets-helper -> ../make-targets-helper-openamp
- 74187589     84 -rw-rw-r--   1 bill     bill        85226 Mar  5 15:00 ./modules-xilinx-6.1.tar.gz
- 74187528     44 -rw-r--r--   1 bill     bill        43715 Apr  5  2011 ./system.dtb
- 74187527  22216 -rw-r--r--   1 bill     bill     22745600 Apr  5  2011 ./Image

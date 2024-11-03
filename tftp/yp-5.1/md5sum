@@ -1,0 +1,5 @@
+99d3fbc87d44118316fef690868a9e66 *core-image-base-genericarm64.rootfs.tar.gz
+f82826ef7b6da5924e2edae56fdc5619 *core-image-initramfs-boot-genericarm64.cpio.gz
+2046d22696958571874ef322d45f44a3 *Image-genericarm64.bin
+0e959f5d611e28adee2b18d2d0dfc322 *md5sum
+cbbb13fcf99596d426aca05f873a709d *modules-genericarm64.tgz
