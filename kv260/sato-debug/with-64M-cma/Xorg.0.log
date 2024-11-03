@@ -1,0 +1,385 @@
+[    20.024] 
+X.Org X Server 1.21.1.13
+X Protocol Version 11, Revision 0
+[    20.024] Current Operating System: Linux genericarm64 6.6.50-yocto-standard #38 SMP PREEMPT Thu Oct 24 15:00:31 EDT 2024 aarch64
+[    20.024] Kernel command line: initrd=\core-image-initramfs-boot-genericarm64.cpio.gz LABEL=Boot root=PARTUUID=0f63dc8a-3641-40de-bf4d-f8bd5c4d678c rootwait rootfstype=ext4
+[    20.024]  
+[    20.024] Current version of pixman: 0.42.2
+[    20.024] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    20.024] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    20.025] (==) Log file: "/var/log/Xorg.0.log", Time: Fri Aug 16 01:52:19 2024
+[    20.025] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    20.026] (==) No Layout section.  Using the first Screen section.
+[    20.026] (==) No screen section available. Using defaults.
+[    20.026] (**) |-->Screen "Default Screen Section" (0)
+[    20.026] (**) |   |-->Monitor "<default monitor>"
+[    20.027] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[    20.027] (**) Allowing byte-swapped clients
+[    20.027] (==) Automatically adding devices
+[    20.027] (==) Automatically enabling devices
+[    20.027] (==) Automatically adding GPU devices
+[    20.027] (==) Automatically binding GPU devices
+[    20.027] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    20.027] (WW) The directory "/usr/share/fonts/X11/misc" does not exist.
+[    20.027] 	Entry deleted from font path.
+[    20.027] (WW) The directory "/usr/share/fonts/X11/TTF" does not exist.
+[    20.027] 	Entry deleted from font path.
+[    20.027] (WW) The directory "/usr/share/fonts/X11/OTF" does not exist.
+[    20.027] 	Entry deleted from font path.
+[    20.028] (WW) The directory "/usr/share/fonts/X11/Type1" does not exist.
+[    20.028] 	Entry deleted from font path.
+[    20.028] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[    20.028] 	Entry deleted from font path.
+[    20.028] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[    20.028] 	Entry deleted from font path.
+[    20.028] (==) FontPath set to:
+	
+[    20.028] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    20.028] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    20.028] (II) Module ABI versions:
+[    20.028] 	X.Org ANSI C Emulation: 0.4
+[    20.028] 	X.Org Video Driver: 25.2
+[    20.028] 	X.Org XInput driver : 24.4
+[    20.028] 	X.Org Server Extension : 10.0
+[    20.031] (--) using VT number 2
+
+[    20.031] (II) systemd-logind: logind integration requires -keeptty and -keeptty was not provided, disabling logind integration
+[    20.037] (II) xfree86: Adding drm device (/dev/dri/card1)
+[    20.037] (II) Platform probe for /sys/devices/platform/axi/fd4a0000.display/drm/card1
+[    20.049] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    20.049] (II) Platform probe for /sys/devices/platform/axi/fd4b0000.gpu/drm/card0
+[    20.050] (II) no primary bus or device found
+[    20.050] 	falling back to /sys/devices/platform/axi/fd4a0000.display/drm/card1
+[    20.050] (II) LoadModule: "glx"
+[    20.051] (WW) Warning, couldn't open module glx
+[    20.051] (EE) Failed to load module "glx" (module does not exist, 0)
+[    20.051] (==) Matched modesetting as autoconfigured driver 0
+[    20.051] (==) Matched fbdev as autoconfigured driver 1
+[    20.051] (==) Assigned the driver to the xf86ConfigLayout
+[    20.051] (II) LoadModule: "modesetting"
+[    20.051] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[    20.056] (II) Module modesetting: vendor="X.Org Foundation"
+[    20.057] 	compiled for 1.21.1.13, module version = 1.21.1
+[    20.057] 	Module class: X.Org Video Driver
+[    20.057] 	ABI class: X.Org Video Driver, version 25.2
+[    20.057] (II) LoadModule: "fbdev"
+[    20.057] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[    20.057] (II) Module fbdev: vendor="X.Org Foundation"
+[    20.057] 	compiled for 1.21.1.13, module version = 0.5.0
+[    20.057] 	Module class: X.Org Video Driver
+[    20.057] 	ABI class: X.Org Video Driver, version 25.2
+[    20.057] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    20.057] (II) FBDEV: driver for framebuffer: fbdev
+[    20.128] (II) modeset(0): using drv /dev/dri/card1
+[    20.128] (WW) Falling back to old probe method for fbdev
+[    20.128] (II) Loading sub module "fbdevhw"
+[    20.128] (II) LoadModule: "fbdevhw"
+[    20.129] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[    20.129] (II) Module fbdevhw: vendor="X.Org Foundation"
+[    20.129] 	compiled for 1.21.1.13, module version = 0.0.2
+[    20.129] 	ABI class: X.Org Video Driver, version 25.2
+[    20.130] (II) modeset(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[    20.130] (==) modeset(0): Depth 24, (==) framebuffer bpp 32
+[    20.130] (==) modeset(0): RGB weight 888
+[    20.130] (==) modeset(0): Default visual is TrueColor
+[    20.130] (II) Loading sub module "glamoregl"
+[    20.130] (II) LoadModule: "glamoregl"
+[    20.130] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    20.152] (II) Module glamoregl: vendor="X.Org Foundation"
+[    20.152] 	compiled for 1.21.1.13, module version = 1.0.1
+[    20.152] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    20.410] (II) modeset(0): glamor X acceleration enabled on softpipe
+[    20.410] (II) modeset(0): glamor initialized
+[    20.410] (==) modeset(0): VariableRefresh: disabled
+[    20.410] (==) modeset(0): AsyncFlipSecondaries: disabled
+[    20.504] (II) modeset(0): Output DP-1 has no monitor section
+[    20.504] (II) modeset(0): Up to 1 crtcs needed for screen.
+[    20.505] (II) modeset(0): Allocated crtc nr. 0 to this screen.
+[    20.600] (II) modeset(0): EDID for output DP-1
+[    20.600] (II) modeset(0): Manufacturer: XEC  Model: 1001  Serial#: 546
+[    20.600] (II) modeset(0): Year: 2023  Week: 39
+[    20.600] (II) modeset(0): EDID Version: 1.3
+[    20.600] (II) modeset(0): Digital Display Input
+[    20.600] (II) modeset(0): Max Image Size [cm]: horiz.: 53  vert.: 29
+[    20.600] (II) modeset(0): Gamma: 2.20
+[    20.600] (II) modeset(0): DPMS capabilities: Off
+[    20.600] (II) modeset(0): Supported color encodings: RGB 4:4:4 YCrCb 4:4:4 
+[    20.601] (II) modeset(0): First detailed timing not preferred mode in violation of standard!
+[    20.601] (II) modeset(0): redX: 0.640 redY: 0.330   greenX: 0.300 greenY: 0.600
+[    20.601] (II) modeset(0): blueX: 0.150 blueY: 0.060   whiteX: 0.312 whiteY: 0.329
+[    20.601] (II) modeset(0): Supported established timings:
+[    20.601] (II) modeset(0): 640x480@60Hz
+[    20.601] (II) modeset(0): 640x480@72Hz
+[    20.601] (II) modeset(0): 640x480@75Hz
+[    20.601] (II) modeset(0): 800x600@60Hz
+[    20.601] (II) modeset(0): 800x600@72Hz
+[    20.601] (II) modeset(0): 800x600@75Hz
+[    20.601] (II) modeset(0): 1024x768@60Hz
+[    20.601] (II) modeset(0): 1024x768@70Hz
+[    20.601] (II) modeset(0): 1024x768@75Hz
+[    20.601] (II) modeset(0): 1280x1024@75Hz
+[    20.601] (II) modeset(0): Manufacturer's mask: 0
+[    20.601] (II) modeset(0): Supported standard timings:
+[    20.601] (II) modeset(0): #0: hsize: 1152  vsize 864  refresh: 60  vid: 16497
+[    20.601] (II) modeset(0): #1: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    20.601] (II) modeset(0): #2: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[    20.602] (II) modeset(0): #3: hsize: 1440  vsize 900  refresh: 60  vid: 149
+[    20.602] (II) modeset(0): #4: hsize: 1600  vsize 900  refresh: 60  vid: 49321
+[    20.602] (II) modeset(0): #5: hsize: 1680  vsize 1050  refresh: 60  vid: 179
+[    20.602] (II) modeset(0): #6: hsize: 1920  vsize 1080  refresh: 60  vid: 49361
+[    20.602] (II) modeset(0): Supported detailed timing:
+[    20.602] (II) modeset(0): clock: 148.5 MHz   Image Size:  527 x 296 mm
+[    20.602] (II) modeset(0): h_active: 1920  h_sync: 1968  h_sync_end 2000 h_blank_end 2200 h_border: 0
+[    20.602] (II) modeset(0): v_active: 1080  v_sync: 1083  v_sync_end 1088 v_blanking: 1125 v_border: 0
+[    20.602] (II) modeset(0): Monitor name: ES-24X5A
+[    20.602] (II) modeset(0): Serial No: 
+[    20.602] (II) modeset(0): Ranges: V min: 48 V max: 75 Hz, H min: 30 H max: 120 kHz, PixClock max 205 MHz
+[    20.602] (II) modeset(0): Supported detailed timing:
+[    20.602] (II) modeset(0): clock: 148.5 MHz   Image Size:  527 x 296 mm
+[    20.602] (II) modeset(0): h_active: 1920  h_sync: 1968  h_sync_end 2000 h_blank_end 2200 h_border: 0
+[    20.602] (II) modeset(0): v_active: 1080  v_sync: 1083  v_sync_end 1088 v_blanking: 1125 v_border: 0
+[    20.602] (II) modeset(0): Supported detailed timing:
+[    20.603] (II) modeset(0): clock: 175.5 MHz   Image Size:  527 x 296 mm
+[    20.603] (II) modeset(0): h_active: 1920  h_sync: 1968  h_sync_end 2000 h_blank_end 2080 h_border: 0
+[    20.603] (II) modeset(0): v_active: 1080  v_sync: 1083  v_sync_end 1088 v_blanking: 1125 v_border: 0
+[    20.603] (II) modeset(0): Supported detailed timing:
+[    20.603] (II) modeset(0): clock: 74.4 MHz   Image Size:  527 x 296 mm
+[    20.603] (II) modeset(0): h_active: 1366  h_sync: 1414  h_sync_end 1446 h_blank_end 1526 h_border: 0
+[    20.603] (II) modeset(0): v_active: 768  v_sync: 771  v_sync_end 776 v_blanking: 813 v_border: 0
+[    20.603] (II) modeset(0): Number of EDID sections to follow: 1
+[    20.603] (II) modeset(0): EDID (in hex):
+[    20.603] (II) modeset(0): 	00ffffffffffff0060a3011022020000
+[    20.603] (II) modeset(0): 	2721010380351d7828ee91a3544c9926
+[    20.603] (II) modeset(0): 	0f50542dcf00714081c081809500a9c0
+[    20.603] (II) modeset(0): 	b300d1c00101023a801871382d403020
+[    20.603] (II) modeset(0): 	35000f282100001e000000fc0045532d
+[    20.604] (II) modeset(0): 	32345835410a20202020000000ff000a
+[    20.604] (II) modeset(0): 	202020202020202020202020000000fd
+[    20.604] (II) modeset(0): 	00304b1e7814000a20202020202001cf
+[    20.604] (II) modeset(0): 	020334c4489001020304131f05e200d5
+[    20.604] (II) modeset(0): 	e305c00023097f078301000067030c00
+[    20.604] (II) modeset(0): 	10001848e6060501626200681a000001
+[    20.604] (II) modeset(0): 	01304be6023a801871382d4030203500
+[    20.604] (II) modeset(0): 	0f282100001a8e4480a070382d403020
+[    20.604] (II) modeset(0): 	35000f282100001a141d56a050002d30
+[    20.604] (II) modeset(0): 	302035000f282100001a000000000000
+[    20.604] (II) modeset(0): 	0000000000000000000000000000002a
+[    20.605] (--) modeset(0): HDMI max TMDS frequency 360000KHz
+[    20.605] (II) modeset(0): Printing probed modes for output DP-1
+[    20.605] (II) modeset(0): Modeline "1920x1080"x75.0  175.50  1920 1968 2000 2080  1080 1083 1088 1125 +hsync -vsync (84.4 kHz e)
+[    20.605] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 1968 2000 2200  1080 1083 1088 1125 +hsync +vsync (67.5 kHz e)
+[    20.605] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 1968 2000 2200  1080 1083 1088 1125 +hsync -vsync (67.5 kHz e)
+[    20.605] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    20.606] (II) modeset(0): Modeline "1920x1080"x50.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    20.606] (II) modeset(0): Modeline "1920x1080"x59.9  148.35  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.4 kHz e)
+[    20.606] (II) modeset(0): Modeline "1680x1050"x59.9  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    20.606] (II) modeset(0): Modeline "1600x900"x60.0  108.00  1600 1624 1704 1800  900 901 904 1000 +hsync +vsync (60.0 kHz e)
+[    20.606] (II) modeset(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    20.606] (II) modeset(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    20.606] (II) modeset(0): Modeline "1440x900"x59.9   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    20.606] (II) modeset(0): Modeline "1366x768"x60.0   74.44  1366 1414 1446 1526  768 771 776 813 +hsync -vsync (48.8 kHz e)
+[    20.606] (II) modeset(0): Modeline "1152x864"x60.0   81.58  1152 1216 1336 1520  864 865 868 895 -hsync +vsync (53.7 kHz)
+[    20.606] (II) modeset(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    20.607] (II) modeset(0): Modeline "1280x720"x50.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    20.607] (II) modeset(0): Modeline "1280x720"x59.9   74.18  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    20.607] (II) modeset(0): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    20.607] (II) modeset(0): Modeline "1024x768"x70.1   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[    20.607] (II) modeset(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    20.607] (II) modeset(0): Modeline "800x600"x72.2   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[    20.607] (II) modeset(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    20.607] (II) modeset(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    20.607] (II) modeset(0): Modeline "720x480"x60.0   27.03  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    20.607] (II) modeset(0): Modeline "720x480"x59.9   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    20.607] (II) modeset(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    20.607] (II) modeset(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    20.608] (II) modeset(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    20.608] (II) modeset(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    20.608] (II) modeset(0): Output DP-1 connected
+[    20.608] (II) modeset(0): Using exact sizes for initial modes
+[    20.608] (II) modeset(0): Output DP-1 using initial mode 1920x1080 +0+0
+[    20.608] (==) modeset(0): Using gamma correction (1.0, 1.0, 1.0)
+[    20.608] (==) modeset(0): DPI set to (96, 96)
+[    20.608] (II) Loading sub module "fb"
+[    20.608] (II) LoadModule: "fb"
+[    20.608] (II) Module "fb" already built-in
+[    20.608] (II) UnloadModule: "fbdev"
+[    20.608] (II) Unloading fbdev
+[    20.608] (II) UnloadSubModule: "fbdevhw"
+[    20.608] (II) Unloading fbdevhw
+[    20.836] (==) modeset(0): Backing store enabled
+[    20.836] (==) modeset(0): Silken mouse enabled
+[    20.848] (II) modeset(0): Initializing kms color map for depth 24, 8 bpc.
+[    20.849] (==) modeset(0): DPMS enabled
+[    20.849] (II) modeset(0): [DRI2] Setup complete
+[    20.849] (II) modeset(0): [DRI2]   DRI driver: kms_swrast
+[    20.849] (II) modeset(0): [DRI2]   VDPAU driver: kms_swrast
+[    20.849] (II) Initializing extension Generic Event Extension
+[    20.849] (II) Initializing extension SHAPE
+[    20.849] (II) Initializing extension MIT-SHM
+[    20.849] (II) Initializing extension XInputExtension
+[    20.849] (II) Initializing extension XTEST
+[    20.849] (II) Initializing extension BIG-REQUESTS
+[    20.849] (II) Initializing extension SYNC
+[    20.849] (II) Initializing extension XKEYBOARD
+[    20.849] (II) Initializing extension XC-MISC
+[    20.849] (II) Initializing extension XFIXES
+[    20.850] (II) Initializing extension RENDER
+[    20.850] (II) Initializing extension RANDR
+[    20.850] (II) Initializing extension COMPOSITE
+[    20.850] (II) Initializing extension DAMAGE
+[    20.850] (II) Initializing extension MIT-SCREEN-SAVER
+[    20.850] (II) Initializing extension DOUBLE-BUFFER
+[    20.850] (II) Initializing extension RECORD
+[    20.850] (II) Initializing extension DPMS
+[    20.850] (II) Initializing extension Present
+[    20.850] (II) Initializing extension DRI3
+[    20.850] (II) Initializing extension X-Resource
+[    20.850] (II) Initializing extension XVideo
+[    20.850] (II) Initializing extension XVideo-MotionCompensation
+[    20.850] (II) Initializing extension GLX
+[    20.850] (II) Initializing extension XFree86-VidModeExtension
+[    20.850] (II) Initializing extension XFree86-DGA
+[    20.850] (II) Initializing extension XFree86-DRI
+[    20.850] (II) Initializing extension DRI2
+[    20.852] (II) modeset(0): Damage tracking initialized
+[    20.852] (II) modeset(0): Setting screen physical size to 508 x 285
+[    22.456] (II) XKB: Reusing cached keymap
+[    22.587] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event1)
+[    22.587] (**) Logitech USB Receiver: Applying InputClass "libinput keyboard catchall"
+[    22.587] (II) LoadModule: "libinput"
+[    22.588] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
+[    22.591] (II) Module libinput: vendor="X.Org Foundation"
+[    22.591] 	compiled for 1.21.1.13, module version = 1.4.0
+[    22.591] 	Module class: X.Org XInput Driver
+[    22.591] 	ABI class: X.Org XInput driver, version 24.4
+[    22.591] (II) Using input driver 'libinput' for 'Logitech USB Receiver'
+[    22.592] 	Option "_source" "server/udev"
+[    22.592] 	Option "name" "Logitech USB Receiver"
+[    22.592] 	Option "path" "/dev/input/event1"
+[    22.592] 	Option "device" "/dev/input/event1"
+[    22.592] 	Option "major" "13"
+[    22.592] 	Option "minor" "65"
+[    22.592] 	Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0/0003:046D:C52B.0001/input/input1/event1"
+[    22.592] 	Option "driver" "libinput"
+[    22.592] (**) Logitech USB Receiver: always reports core events
+[    22.592] (**) Option "Device" "/dev/input/event1"
+[    22.604] (**) Option "Device" "/dev/input/event1"
+[    22.618] (II) event1  - Logitech USB Receiver: is tagged by udev as: Keyboard
+[    22.619] (II) event1  - Logitech USB Receiver: device is a keyboard
+[    22.621] (II) event1  - Logitech USB Receiver: device removed
+[    22.640] (**) Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0/0003:046D:C52B.0001/input/input1/event1"
+[    22.640] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 6)
+[    22.640] (II) XKB: Reusing cached keymap
+[    22.643] (**) Option "Device" "/dev/input/event1"
+[    22.655] (II) event1  - Logitech USB Receiver: is tagged by udev as: Keyboard
+[    22.656] (II) event1  - Logitech USB Receiver: device is a keyboard
+[    22.667] (II) config/udev: Adding input device Logitech USB Receiver Mouse (/dev/input/event2)
+[    22.667] (**) Logitech USB Receiver Mouse: Applying InputClass "libinput pointer catchall"
+[    22.667] (II) Using input driver 'libinput' for 'Logitech USB Receiver Mouse'
+[    22.667] 	Option "_source" "server/udev"
+[    22.667] 	Option "name" "Logitech USB Receiver Mouse"
+[    22.667] 	Option "path" "/dev/input/event2"
+[    22.667] 	Option "device" "/dev/input/event2"
+[    22.667] 	Option "major" "13"
+[    22.667] 	Option "minor" "66"
+[    22.667] 	Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input2/event2"
+[    22.667] 	Option "driver" "libinput"
+[    22.667] (**) Logitech USB Receiver Mouse: always reports core events
+[    22.667] (**) Option "Device" "/dev/input/event2"
+[    22.669] (**) Option "Device" "/dev/input/event2"
+[    22.682] (II) event2  - Logitech USB Receiver Mouse: is tagged by udev as: Mouse
+[    22.683] (II) event2  - Logitech USB Receiver Mouse: device is a pointer
+[    22.685] (II) event2  - Logitech USB Receiver Mouse: device removed
+[    22.720] (II) libinput: Logitech USB Receiver Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    22.720] (II) libinput: Logitech USB Receiver Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    22.720] (II) libinput: Logitech USB Receiver Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    22.720] (**) Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input2/event2"
+[    22.720] (II) XINPUT: Adding extended input device "Logitech USB Receiver Mouse" (type: MOUSE, id 7)
+[    22.721] (**) Option "AccelerationScheme" "none"
+[    22.721] (**) Logitech USB Receiver Mouse: (accel) selected scheme none/0
+[    22.721] (**) Logitech USB Receiver Mouse: (accel) acceleration factor: 2.000
+[    22.721] (**) Logitech USB Receiver Mouse: (accel) acceleration threshold: 4
+[    22.723] (**) Option "Device" "/dev/input/event2"
+[    22.735] (II) event2  - Logitech USB Receiver Mouse: is tagged by udev as: Mouse
+[    22.737] (II) event2  - Logitech USB Receiver Mouse: device is a pointer
+[    22.748] (II) config/udev: Adding input device Logitech USB Receiver Consumer Control (/dev/input/event3)
+[    22.748] (**) Logitech USB Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    22.748] (II) Using input driver 'libinput' for 'Logitech USB Receiver Consumer Control'
+[    22.748] 	Option "_source" "server/udev"
+[    22.748] 	Option "name" "Logitech USB Receiver Consumer Control"
+[    22.748] 	Option "path" "/dev/input/event3"
+[    22.748] 	Option "device" "/dev/input/event3"
+[    22.748] 	Option "major" "13"
+[    22.748] 	Option "minor" "67"
+[    22.748] 	Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input3/event3"
+[    22.748] 	Option "driver" "libinput"
+[    22.748] (**) Logitech USB Receiver Consumer Control: always reports core events
+[    22.748] (**) Option "Device" "/dev/input/event3"
+[    22.749] (**) Option "Device" "/dev/input/event3"
+[    22.763] (II) event3  - Logitech USB Receiver Consumer Control: is tagged by udev as: Keyboard
+[    22.763] (II) event3  - Logitech USB Receiver Consumer Control: device is a keyboard
+[    22.765] (II) event3  - Logitech USB Receiver Consumer Control: device removed
+[    22.788] (II) libinput: Logitech USB Receiver Consumer Control: needs a virtual subdevice
+[    22.788] (**) Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input3/event3"
+[    22.788] (II) XINPUT: Adding extended input device "Logitech USB Receiver Consumer Control" (type: MOUSE, id 8)
+[    22.789] (**) Option "AccelerationScheme" "none"
+[    22.789] (**) Logitech USB Receiver Consumer Control: (accel) selected scheme none/0
+[    22.789] (**) Logitech USB Receiver Consumer Control: (accel) acceleration factor: 2.000
+[    22.789] (**) Logitech USB Receiver Consumer Control: (accel) acceleration threshold: 4
+[    22.790] (**) Option "Device" "/dev/input/event3"
+[    22.803] (II) event3  - Logitech USB Receiver Consumer Control: is tagged by udev as: Keyboard
+[    22.804] (II) event3  - Logitech USB Receiver Consumer Control: device is a keyboard
+[    22.814] (II) config/udev: Adding input device Logitech USB Receiver System Control (/dev/input/event4)
+[    22.814] (**) Logitech USB Receiver System Control: Applying InputClass "libinput keyboard catchall"
+[    22.814] (II) Using input driver 'libinput' for 'Logitech USB Receiver System Control'
+[    22.814] 	Option "_source" "server/udev"
+[    22.814] 	Option "name" "Logitech USB Receiver System Control"
+[    22.814] 	Option "path" "/dev/input/event4"
+[    22.814] 	Option "device" "/dev/input/event4"
+[    22.814] 	Option "major" "13"
+[    22.814] 	Option "minor" "68"
+[    22.814] 	Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input4/event4"
+[    22.814] 	Option "driver" "libinput"
+[    22.814] (**) Logitech USB Receiver System Control: always reports core events
+[    22.814] (**) Option "Device" "/dev/input/event4"
+[    22.816] (**) Option "Device" "/dev/input/event4"
+[    22.829] (II) event4  - Logitech USB Receiver System Control: is tagged by udev as: Keyboard
+[    22.830] (II) event4  - Logitech USB Receiver System Control: device is a keyboard
+[    22.831] (II) event4  - Logitech USB Receiver System Control: device removed
+[    22.848] (**) Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input4/event4"
+[    22.848] (II) XINPUT: Adding extended input device "Logitech USB Receiver System Control" (type: KEYBOARD, id 9)
+[    22.848] (II) XKB: Reusing cached keymap
+[    22.850] (**) Option "Device" "/dev/input/event4"
+[    22.863] (II) event4  - Logitech USB Receiver System Control: is tagged by udev as: Keyboard
+[    22.864] (II) event4  - Logitech USB Receiver System Control: device is a keyboard
+[    22.869] (II) config/udev: Adding input device gpio-keys (/dev/input/event0)
+[    22.869] (II) No input driver specified, ignoring this device.
+[    22.869] (II) This device may have been added with another device file.
+[    22.915] (**) Logitech USB Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    22.915] (II) Using input driver 'libinput' for 'Logitech USB Receiver Consumer Control'
+[    22.915] 	Option "_source" "_driver/libinput"
+[    22.915] 	Option "name" "Logitech USB Receiver Consumer Control"
+[    22.915] 	Option "path" "/dev/input/event3"
+[    22.915] 	Option "device" "/dev/input/event3"
+[    22.915] 	Option "major" "13"
+[    22.915] 	Option "minor" "67"
+[    22.915] 	Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input3/event3"
+[    22.915] 	Option "driver" "libinput"
+[    22.915] 	Option "AccelerationProfile" "-1"
+[    22.915] 	Option "AccelerationScheme" "none"
+[    22.915] 	Option "_libinput/shared-device" "3"
+[    22.915] 	Option "_libinput/cap-keyboard" "True"
+[    22.916] (**) Logitech USB Receiver Consumer Control: always reports core events
+[    22.916] (**) Option "Device" "/dev/input/event3"
+[    22.916] (II) libinput: Logitech USB Receiver Consumer Control: is a virtual subdevice
+[    22.916] (**) Option "config_info" "udev:/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.1/0003:046D:C52B.0002/input/input3/event3"
+[    22.916] (II) XINPUT: Adding extended input device "Logitech USB Receiver Consumer Control" (type: KEYBOARD, id 10)
+[    22.916] (II) XKB: Reusing cached keymap
+[    22.925] (EE) modeset(0): failed to set mode: Invalid argument
+[    24.427] (II) modeset(0): Disabling kernel dirty updates, not required.

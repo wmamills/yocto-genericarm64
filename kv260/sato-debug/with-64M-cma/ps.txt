@@ -1,0 +1,150 @@
+  PID USER       VSZ STAT COMMAND
+    1 root     19412 S    {systemd} /sbin/init
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [pool_workqueue_]
+    4 root         0 IW<  [kworker/R-rcu_g]
+    5 root         0 IW<  [kworker/R-rcu_p]
+    6 root         0 IW<  [kworker/R-slub_]
+    7 root         0 IW<  [kworker/R-netns]
+    8 root         0 IW   [kworker/0:0-eve]
+    9 root         0 IW<  [kworker/0:0H-ev]
+   10 root         0 IW   [kworker/0:1-rcu]
+   11 root         0 IW   [kworker/u8:0-ev]
+   12 root         0 IW<  [kworker/R-mm_pe]
+   13 root         0 IW   [kworker/u8:1-ev]
+   14 root         0 IW   [rcu_tasks_kthre]
+   15 root         0 IW   [rcu_tasks_rude_]
+   16 root         0 IW   [rcu_tasks_trace]
+   17 root         0 SW   [ksoftirqd/0]
+   18 root         0 IW   [rcu_preempt]
+   19 root         0 SW   [migration/0]
+   20 root         0 SW   [cpuhp/0]
+   21 root         0 SW   [cpuhp/1]
+   22 root         0 SW   [migration/1]
+   23 root         0 SW   [ksoftirqd/1]
+   24 root         0 IW   [kworker/1:0-cgr]
+   25 root         0 IW<  [kworker/1:0H-ev]
+   26 root         0 SW   [cpuhp/2]
+   27 root         0 SW   [migration/2]
+   28 root         0 SW   [ksoftirqd/2]
+   29 root         0 IW   [kworker/2:0-pm]
+   30 root         0 IW<  [kworker/2:0H-ev]
+   31 root         0 SW   [cpuhp/3]
+   32 root         0 SW   [migration/3]
+   33 root         0 SW   [ksoftirqd/3]
+   34 root         0 IW   [kworker/3:0-rcu]
+   35 root         0 IW<  [kworker/3:0H-ev]
+   36 root         0 SW   [kdevtmpfs]
+   37 root         0 IW<  [kworker/R-inet_]
+   38 root         0 IW   [kworker/1:1-pm]
+   39 root         0 SW   [oom_reaper]
+   40 root         0 IW<  [kworker/R-write]
+   41 root         0 SW   [kcompactd0]
+   42 root         0 IW<  [kworker/R-kbloc]
+   43 root         0 IW<  [kworker/R-blkcg]
+   44 root         0 IW   [kworker/u8:2-ev]
+   45 root         0 IW<  [kworker/R-md]
+   46 root         0 IW<  [kworker/R-md_bi]
+   47 root         0 IW<  [kworker/R-devfr]
+   48 root         0 SW   [watchdogd]
+   49 root         0 IW   [kworker/2:1-cgr]
+   50 root         0 IW<  [kworker/2:1H-kb]
+   51 root         0 IW<  [kworker/R-rpcio]
+   52 root         0 IW<  [kworker/R-xprti]
+   53 root         0 SW   [kswapd0]
+   54 root         0 IW<  [kworker/R-nfsio]
+   55 root         0 IW<  [kworker/R-cifsi]
+   56 root         0 IW<  [kworker/R-smb3d]
+   57 root         0 IW<  [kworker/R-cifsf]
+   58 root         0 IW<  [kworker/R-cifso]
+   59 root         0 IW<  [kworker/R-defer]
+   60 root         0 IW<  [kworker/R-serve]
+   61 root         0 IW   [kworker/2:2-rcu]
+   62 root         0 IW   [kworker/2:3-cgr]
+   64 root         0 IW   [kworker/3:1-pm]
+   65 root         0 IW<  [kworker/R-raid5]
+   66 root         0 IW<  [kworker/R-dm_bu]
+   67 root         0 IW<  [kworker/R-mld]
+   68 root         0 IW<  [kworker/3:1H-kb]
+   69 root         0 IW<  [kworker/R-ipv6_]
+   70 root         0 IW<  [kworker/u9:0]
+   72 root         0 IW   [kworker/u8:3-ev]
+   74 root         0 SW   [sugov:0]
+  171 root         0 IW<  [kworker/0:1H-mm]
+  172 root         0 IW<  [kworker/1:1H-kb]
+  181 root         0 IW   [kworker/1:2-pm]
+  195 root         0 IW<  [kworker/R-edac-]
+  196 root         0 SW   [gp]
+  197 root         0 SW   [pp]
+  198 root         0 IW   [kworker/3:2-cgr]
+  199 root         0 IW   [kworker/0:2-eve]
+  202 root         0 SW   [spi2]
+  203 root         0 SW   [irq/48-fd4a0000]
+  204 root         0 SW   [card1-crtc0]
+  205 root         0 IW<  [kworker/R-sdhci]
+  207 root         0 SW   [irq/50-mmc1]
+  208 root         0 IW   [kworker/u8:4]
+  209 root         0 DW   [kworker/0:3+pm]
+  210 root         0 IW<  [kworker/R-tpm_d]
+  212 root         0 SW   [hwrng]
+  213 root         0 IW   [kworker/1:3-eve]
+  231 root         0 IW   [kworker/1:4-rcu]
+  248 root         0 IW<  [kworker/R-mmc_c]
+  262 root         0 IW<  [kworker/3:2H]
+  277 root         0 SW   [jbd2/mmcblk1p3-]
+  278 root         0 IW<  [kworker/R-ext4-]
+  307 root         0 IW<  [kworker/0:2H-mm]
+  322 root     17212 S    /usr/lib/systemd/systemd-journald
+  352 root         0 SW   [scsi_eh_0]
+  353 root         0 IW<  [kworker/R-scsi_]
+  354 root         0 SW   [usb-storage]
+  366 root     28288 S    /usr/lib/systemd/systemd-udevd
+  422 root         0 IW<  [kworker/2:2H]
+  439 rpc       3928 S    /usr/sbin/rpcbind -w -f
+  440 systemd- 83252 S    /usr/lib/systemd/systemd-timesyncd
+  442 root      8724 S    /usr/lib/systemd/systemd-nsresourced
+  443 root      8712 S    /usr/lib/systemd/systemd-userdbd
+  445 root      9672 S    systemd-userwork: waiting...
+  446 root      9672 S    systemd-userwork: waiting...
+  447 root      9672 S    systemd-userwork: waiting...
+  448 root      8960 S    systemd-nsresourcework: waiting...
+  449 root      8960 S    systemd-nsresourcework: waiting...
+  450 root      8960 S    systemd-nsresourcework: waiting...
+  451 root      8960 S    systemd-nsresourcework: waiting...
+  452 root      8960 S    systemd-nsresourcework: waiting...
+  456 root      3468 S    /usr/sbin/klogd -n
+  457 root      3468 S    /usr/sbin/syslogd -n
+  458 root      2240 S    /usr/sbin/acpid
+  459 messageb  6492 S    /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  462 root      9672 S    /usr/sbin/ofonod -n
+  463 root      9360 S    /usr/lib/systemd/systemd-logind
+  467 root         0 IW<  [kworker/1:2H]
+  471 systemd- 10900 S    /usr/lib/systemd/systemd-networkd
+  473 root     13428 S    /usr/sbin/connmand -n
+  479 root         0 IW<  [kworker/R-cfg80]
+  481 avahi     6652 S    avahi-daemon: running [genericarm64.local]
+  484 root     14184 S    /usr/sbin/wpa_supplicant -u
+  485 avahi     6520 S    avahi-daemon: chroot helper
+  489 root      2296 S    /sbin/agetty -o -p -- \u --noclear - linux
+  490 root      6580 S    /bin/login --
+  498 root      4224 S    xinit /etc/X11/Xsession -- /usr/bin/Xorg :0 -br -pn -logverbose 5
+  500 root      352m S<   /usr/bin/Xorg :0 -br -pn -logverbose 5
+  503 root      9992 S    matchbox-window-manager -theme Sato -use_cursor yes
+  507 root      6116 S    dbus-launch --sh-syntax --exit-with-session
+  508 root      6152 S    /usr/bin/dbus-daemon --syslog --fork --print-pid 5 --print-address 7 --session
+  514 root      298m S    /usr/libexec/at-spi-bus-launcher --launch-immediately
+  518 root      110m S    connman-applet
+  522 root         0 Z    [gsettings-data-]
+  531 root         0 Z    [xinput_calibrat]
+  537 root      113m S    matchbox-desktop
+  538 root      111m S    matchbox-panel --start-applets showdesktop,windowselector --end-applets clock,battery,,systray,startup-notify,notify
+  543 root      6004 S    /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 10 --address=unix:path=/tmp/at-spi/bus_0
+  546 root     11220 S    /usr/libexec/gconfd-2
+  551 root      150m S<   /usr/bin/pulseaudio --start --log-target=syslog
+  552 root     25592 S    /usr/bin/settings-daemon
+  558 root      229m S    /usr/libexec/at-spi2-registryd --use-gnome-session
+  567 root     11868 S    /usr/lib/systemd/systemd --user
+  569 root     13088 S    (sd-pam)
+  574 root      3600 S    -sh
+  583 root      2296 S    /sbin/agetty -o -p -- \u --noclear - linux
+  585 root      3600 R    ps

@@ -1,0 +1,160 @@
+Date: 2024-08-16 UTC
+[01:13:49.076] weston 13.0.3
+               https://wayland.freedesktop.org
+               Bug reports to: https://gitlab.freedesktop.org/wayland/weston/issues/
+               Build: 13.0.3
+[01:13:49.076] Command line: weston
+[01:13:49.076] OS: Linux, 6.6.50-yocto-standard, #39 SMP PREEMPT Thu Oct 24 15:57:51 EDT 2024, aarch64
+[01:13:49.076] Flight recorder: enabled
+[01:13:49.077] Using config file '/etc/xdg/weston/weston.ini'
+[01:13:49.077] Output repaint window is 7 ms maximum.
+[01:13:49.078] Loading module '/usr/lib/libweston-13/drm-backend.so'
+[01:13:49.087] initializing drm backend
+[01:13:49.087] Trying libseat launcher...
+[01:13:49.087] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:64] Could not connect to socket /run/seatd.sock: No such file or directory
+[01:13:49.087] [c/debug/seatd/0.8.0/libseat/libseat.c:76] Backend 'seatd' failed to open seat, skipping
+[01:13:49.088] [c/debug/seatd/0.8.0/libseat/libseat.c:76] Backend 'logind' failed to open seat, skipping
+[01:13:49.092] [c/debug/seatd/0.8.0/seatd/seat.c:39] Created VT-bound seat seat0
+[01:13:49.092] [c/debug/seatd/0.8.0/seatd/server.c:145] New client connected (pid: 488, uid: 0, gid: 0)
+[01:13:49.092] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:633] Started embedded seatd
+[01:13:49.092] [c/debug/seatd/0.8.0/seatd/seat.c:170] Added client 7 to seat0
+[01:13:49.093] [c/debug/seatd/0.8.0/seatd/seat.c:480] Opened client 7 on seat0
+[01:13:49.093] [c/debug/seatd/0.8.0/libseat/libseat.c:73] Seat opened with backend 'builtin'
+[01:13:49.093] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:212] Enabling seat
+[01:13:49.093] libseat: session control granted
+[01:13:49.102] using /dev/dri/card0
+[01:13:49.102] DRM: supports atomic modesetting
+[01:13:49.102] DRM: supports GBM modifiers
+[01:13:49.102] DRM: does not support async page flipping
+[01:13:49.102] DRM: supports picture aspect ratio
+MESA-LOADER: failed to open tidss: /usr/lib/dri/tidss_dri.so: cannot open shared object file: No such file or directory (search paths /usr/lib/dri, suffix _dri)
+[01:13:49.138] Loading module '/usr/lib/libweston-13/gl-renderer.so'
+[01:13:49.145] warning: failed to query rendering device from EGL
+[01:13:49.146] EGL version: 1.4
+[01:13:49.146] EGL vendor: Mesa Project
+[01:13:49.146] EGL client APIs: OpenGL OpenGL_ES 
+[01:13:49.146] warning: Disabling render GPU timeline and explicit synchronization due to missing EGL_ANDROID_native_fence_sync extension
+[01:13:49.146] EGL features:
+               EGL Wayland extension: no
+               context priority: no
+               buffer age: yes
+               partial update: no
+               swap buffers with damage: no
+               configless context: yes
+               surfaceless context: yes
+               dmabuf support: modifiers
+[01:13:49.270] GL version: OpenGL ES 3.1 Mesa 24.0.7
+[01:13:49.270] GLSL version: OpenGL ES GLSL ES 3.10
+[01:13:49.270] GL vendor: Mesa
+[01:13:49.270] GL renderer: softpipe
+[01:13:49.319] GL ES 3.1 - renderer features:
+               read-back format: ARGB8888
+               glReadPixels supports y-flip: yes
+               wl_shm 10 bpc formats: yes
+               wl_shm 16 bpc formats: yes
+               wl_shm half-float formats: yes
+               internal R and RG formats: yes
+               OES_EGL_image_external: yes
+[01:13:49.319] Using GL renderer
+[01:13:49.356] event1  - tps65219-pwrbutton: is tagged by udev as: Keyboard
+[01:13:49.357] event1  - tps65219-pwrbutton: device is a keyboard
+[01:13:49.367] event2  - Logitech USB Receiver: is tagged by udev as: Keyboard
+[01:13:49.369] event2  - Logitech USB Receiver: device is a keyboard
+[01:13:49.380] event3  - Logitech USB Receiver Mouse: is tagged by udev as: Mouse
+[01:13:49.381] event3  - Logitech USB Receiver Mouse: device is a pointer
+[01:13:49.393] event4  - Logitech USB Receiver Consumer Control: is tagged by udev as: Keyboard
+[01:13:49.393] event4  - Logitech USB Receiver Consumer Control: device is a keyboard
+[01:13:49.404] event5  - Logitech USB Receiver System Control: is tagged by udev as: Keyboard
+[01:13:49.405] event5  - Logitech USB Receiver System Control: device is a keyboard
+[01:13:49.410] event0  - gpio-keys: not tagged as supported input device
+[01:13:49.467] event0  - not using input device '/dev/input/event0'
+[01:13:49.499] libinput: configuring device "tps65219-pwrbutton".
+[01:13:49.499] libinput: configuring device "Logitech USB Receiver".
+[01:13:49.499] libinput: configuring device "Logitech USB Receiver Mouse".
+[01:13:49.499] libinput: configuring device "Logitech USB Receiver Consumer Control".
+[01:13:49.499] libinput: configuring device "Logitech USB Receiver System Control".
+[01:13:49.757] DRM: head 'HDMI-A-1' found, connector 40 is connected, EDID make 'XEC', model 'ES-24X5A', serial ''
+               Supported EOTF modes: SDR
+[01:13:49.760] Registered plugin API 'weston_drm_output_api_v1' of size 40
+[01:13:49.760] Color manager: no-op
+[01:13:49.761] Output 'HDMI-A-1' attempts EOTF mode: SDR
+[01:13:49.761] Output 'HDMI-A-1' using color profile: stock sRGB color profile
+[01:13:49.762] Chosen EGL config details: id:  16 rgba: 8 8 8 0 buf: 24 dep:  0 stcl: 0 int: 1-1 type: win vis_id: XRGB8888 (0x34325258)
+[01:13:49.762] Output HDMI-A-1 (crtc 38) video modes:
+               1920x1080@60.0, current, 148.5 MHz
+               1920x1080@60.0, 148.5 MHz
+               1920x1080@60.0 16:9, 148.5 MHz
+               1920x1080@59.9 16:9, 148.4 MHz
+               1920x1080@50.0 16:9, 148.5 MHz
+               1680x1050@59.9, 119.0 MHz
+               1600x900@60.0, 108.0 MHz
+               1280x1024@75.0, 135.0 MHz
+               1280x1024@60.0, 108.0 MHz
+               1440x900@59.9, 88.8 MHz
+               1366x768@60.0, 74.4 MHz
+               1152x864@60.0, 81.6 MHz
+               1280x720@60.0, 74.2 MHz
+               1280x720@60.0 16:9, 74.2 MHz
+               1280x720@59.9 16:9, 74.2 MHz
+               1280x720@50.0 16:9, 74.2 MHz
+               1024x768@75.0, 78.8 MHz
+               1024x768@70.1, 75.0 MHz
+               1024x768@60.0, 65.0 MHz
+               800x600@75.0, 49.5 MHz
+               800x600@72.2, 50.0 MHz
+               800x600@60.3, 40.0 MHz
+               720x480@60.0 4:3, 27.0 MHz
+               720x480@60.0 16:9, 27.0 MHz
+               720x480@59.9 4:3, 27.0 MHz
+               720x480@59.9 16:9, 27.0 MHz
+               640x480@75.0, 31.5 MHz
+               640x480@72.8, 31.5 MHz
+               640x480@60.0 4:3, 25.2 MHz
+               640x480@59.9, 25.2 MHz
+               640x480@59.9 4:3, 25.2 MHz
+[01:13:49.764] associating input device event1 with output HDMI-A-1 (none by udev)
+[01:13:49.764] associating input device event2 with output HDMI-A-1 (none by udev)
+[01:13:49.764] associating input device event3 with output HDMI-A-1 (none by udev)
+[01:13:49.765] associating input device event4 with output HDMI-A-1 (none by udev)
+[01:13:49.765] associating input device event5 with output HDMI-A-1 (none by udev)
+[01:13:49.765] Output 'HDMI-A-1' enabled with head(s) HDMI-A-1
+[01:13:49.765] Compositor capabilities:
+               arbitrary surface rotation: yes
+               screen capture uses y-flip: yes
+               cursor planes: yes
+               arbitrary resolutions: no
+               view mask clipping: yes
+               explicit sync: no
+               color operations: yes
+               presentation clock: CLOCK_MONOTONIC, id 1
+               presentation clock resolution: 0.000000001 s
+[01:13:49.767] Loading module '/usr/lib/weston/desktop-shell.so'
+[01:13:49.772] Loading module '/usr/lib/libweston-13/xwayland.so'
+[01:13:49.857] Registered plugin API 'weston_xwayland_v3' of size 32
+[01:13:49.857] Registered plugin API 'weston_xwayland_surface_v1' of size 16
+[01:13:49.857] xserver listening on display :0
+[01:13:49.858] launching '/usr/libexec/weston-keyboard'
+[01:13:49.869] launching '/usr/libexec/weston-desktop-shell'
+could not load cursor 'dnd-move'
+could not load cursor 'dnd-move'
+could not load cursor 'dnd-copy'
+could not load cursor 'dnd-none'
+could not load cursor 'dnd-copy'
+could not load cursor 'dnd-none'
+[01:13:53.571] unexpectedly large timestamp jump (from 178220 to 179270)
+[01:14:28.761] client bug: timer event3 debounce: scheduled expiry is in the past (-73ms), your system is too slow
+[01:14:28.761] client bug: timer event3 debounce short: scheduled expiry is in the past (-86ms), your system is too slow
+could not load cursor 'dnd-move'
+could not load cursor 'dnd-copy'
+could not load cursor 'dnd-none'
+[01:14:31.382] event3  - Logitech USB Receiver Mouse: client bug: event processing lagging behind by 637ms, your system is too slow
+[01:14:52.166] event1  - tps65219-pwrbutton: device removed
+[01:14:52.192] event2  - Logitech USB Receiver: device removed
+[01:14:52.208] event3  - Logitech USB Receiver Mouse: device removed
+[01:14:52.248] event4  - Logitech USB Receiver Consumer Control: device removed
+[01:14:52.268] event5  - Logitech USB Receiver System Control: device removed
+[01:14:52.488] [c/debug/seatd/0.8.0/seatd/seat.c:418] No clients on seat0 to activate
+[01:14:52.608] [c/debug/seatd/0.8.0/seatd/seat.c:524] Closed client 7 on seat0
+[01:14:52.608] [c/debug/seatd/0.8.0/seatd/seat.c:192] Removed client 7 from seat0
+[01:14:52.609] [c/debug/seatd/0.8.0/seatd/client.c:471] Client disconnected
+[01:14:52.609] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:645] Stopped embedded seatd

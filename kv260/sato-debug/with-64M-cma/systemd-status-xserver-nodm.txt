@@ -1,0 +1,34 @@
+* xserver-nodm.service - Xserver startup without a display manager
+     Loaded: loaded (/usr/lib/systemd/system/xserver-nodm.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2024-08-16 01:52:19 UTC; 1min 22s ago
+ Invocation: 72505270418947aea5c0335507423c2b
+   Main PID: 471 (xinit)
+      Tasks: 24 (limit: 4278)
+     Memory: 127.6M (peak: 138.1M)
+        CPU: 15.567s
+     CGroup: /system.slice/xserver-nodm.service
+             |-471 xinit /etc/X11/Xsession -- /usr/bin/Xorg :0 -br -pn -logverbose 5
+             |-473 /usr/bin/Xorg :0 -br -pn -logverbose 5
+             |-476 matchbox-window-manager -theme Sato -use_cursor yes
+             |-480 dbus-launch --sh-syntax --exit-with-session
+             |-481 /usr/bin/dbus-daemon --syslog --fork --print-pid 5 --print-address 7 --session
+             |-487 /usr/libexec/at-spi-bus-launcher --launch-immediately
+             |-491 connman-applet
+             |-510 matchbox-desktop
+             |-511 matchbox-panel --start-applets showdesktop,windowselector --end-applets clock,battery,,systray,startup-notify,notify
+             |-516 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 10 --address=unix:path=/tmp/at-spi/bus_0
+             |-519 /usr/libexec/gconfd-2
+             |-525 /usr/bin/settings-daemon
+             `-531 /usr/libexec/at-spi2-registryd --use-gnome-session
+
+Aug 16 01:52:23 genericarm64 Xserver[476]: matchbox: ignoring key shortcut telephone=!$dates
+Aug 16 01:52:23 genericarm64 Xserver[476]: matchbox: Cant find a keycode for keysym 269025050
+Aug 16 01:52:23 genericarm64 Xserver[476]: matchbox: ignoring key shortcut XF86Start=!matchbox-remote -desktop
+Aug 16 01:52:23 genericarm64 Xserver[483]: [settings daemon] Forking. run with -n to prevent fork
+Aug 16 01:52:24 genericarm64 Xserver[516]: dbus-daemon[516]: Activating service name='org.a11y.atspi.Registry' requested by ':1.2' (uid=0 pid=511 comm="matchbox-panel --start-applets showdesktop,windows")
+Aug 16 01:52:24 genericarm64 Xserver[516]: dbus-daemon[516]: Successfully activated service 'org.a11y.atspi.Registry'
+Aug 16 01:52:24 genericarm64 Xserver[531]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Aug 16 01:52:24 genericarm64 Xserver[476]: matchbox-wm: X error warning (0xe00002): BadWindow (invalid Window parameter) (opcode: 12)
+Aug 16 01:52:33 genericarm64 matchbox-deskto[510]: Could not load a pixbuf from icon theme.
+                                                   This may indicate that pixbuf loaders or the mime database could not be found.
+Aug 16 01:52:33 genericarm64 matchbox-deskto[510]: Error loading icon: Failed to load /usr/share/pixmaps/xinput_calibrator.xpm: Unrecognized image file format

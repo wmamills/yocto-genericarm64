@@ -1,0 +1,124 @@
+[  1584.109] 
+X.Org X Server 1.21.1.13
+X Protocol Version 11, Revision 0
+[  1584.109] Current Operating System: Linux genericarm64 6.6.50-yocto-standard #37 SMP PREEMPT Tue Oct 22 15:58:58 EDT 2024 aarch64
+[  1584.109] Kernel command line: initrd=\core-image-initramfs-boot-genericarm64.cpio.gz LABEL=Boot root=PARTUUID=0f63dc8a-3641-40de-bf4d-f8bd5c4d678c rootwait rootfstype=ext4
+[  1584.109]  
+[  1584.109] Current version of pixman: 0.42.2
+[  1584.109] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[  1584.109] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[  1584.109] (==) Log file: "/var/log/Xorg.0.log", Time: Thu Aug 15 21:42:26 2024
+[  1584.110] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[  1584.111] (==) No Layout section.  Using the first Screen section.
+[  1584.111] (==) No screen section available. Using defaults.
+[  1584.111] (**) |-->Screen "Default Screen Section" (0)
+[  1584.111] (**) |   |-->Monitor "<default monitor>"
+[  1584.112] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[  1584.112] (**) Allowing byte-swapped clients
+[  1584.112] (==) Automatically adding devices
+[  1584.112] (==) Automatically enabling devices
+[  1584.112] (==) Automatically adding GPU devices
+[  1584.112] (==) Automatically binding GPU devices
+[  1584.112] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[  1584.112] (WW) The directory "/usr/share/fonts/X11/misc" does not exist.
+[  1584.112] 	Entry deleted from font path.
+[  1584.112] (WW) The directory "/usr/share/fonts/X11/TTF" does not exist.
+[  1584.112] 	Entry deleted from font path.
+[  1584.112] (WW) The directory "/usr/share/fonts/X11/OTF" does not exist.
+[  1584.112] 	Entry deleted from font path.
+[  1584.112] (WW) The directory "/usr/share/fonts/X11/Type1" does not exist.
+[  1584.112] 	Entry deleted from font path.
+[  1584.112] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[  1584.113] 	Entry deleted from font path.
+[  1584.113] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[  1584.113] 	Entry deleted from font path.
+[  1584.113] (==) FontPath set to:
+	
+[  1584.113] (==) ModulePath set to "/usr/lib/xorg/modules"
+[  1584.113] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[  1584.113] (II) Module ABI versions:
+[  1584.113] 	X.Org ANSI C Emulation: 0.4
+[  1584.113] 	X.Org Video Driver: 25.2
+[  1584.113] 	X.Org XInput driver : 24.4
+[  1584.113] 	X.Org Server Extension : 10.0
+[  1584.117] (--) using VT number 4
+
+[  1584.117] (II) systemd-logind: logind integration requires -keeptty and -keeptty was not provided, disabling logind integration
+[  1584.122] (II) xfree86: Adding drm device (/dev/dri/card1)
+[  1584.122] (II) Platform probe for /sys/devices/platform/axi/fd4a0000.display/drm/card1
+[  1584.124] (II) xfree86: Adding drm device (/dev/dri/card0)
+[  1584.124] (II) Platform probe for /sys/devices/platform/axi/fd4b0000.gpu/drm/card0
+[  1584.124] (II) no primary bus or device found
+[  1584.124] (II) LoadModule: "glx"
+[  1584.125] (WW) Warning, couldn't open module glx
+[  1584.125] (EE) Failed to load module "glx" (module does not exist, 0)
+[  1584.125] (==) Matched modesetting as autoconfigured driver 0
+[  1584.125] (==) Matched fbdev as autoconfigured driver 1
+[  1584.125] (==) Assigned the driver to the xf86ConfigLayout
+[  1584.125] (II) LoadModule: "modesetting"
+[  1584.126] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[  1584.131] (II) Module modesetting: vendor="X.Org Foundation"
+[  1584.131] 	compiled for 1.21.1.13, module version = 1.21.1
+[  1584.131] 	Module class: X.Org Video Driver
+[  1584.131] 	ABI class: X.Org Video Driver, version 25.2
+[  1584.131] (II) LoadModule: "fbdev"
+[  1584.131] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[  1584.132] (II) Module fbdev: vendor="X.Org Foundation"
+[  1584.132] 	compiled for 1.21.1.13, module version = 0.5.0
+[  1584.132] 	Module class: X.Org Video Driver
+[  1584.132] 	ABI class: X.Org Video Driver, version 25.2
+[  1584.132] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[  1584.132] (II) FBDEV: driver for framebuffer: fbdev
+[  1584.203] (WW) Falling back to old probe method for modesetting
+[  1584.203] (EE) open /dev/dri/card0: No such file or directory
+[  1584.203] (WW) Falling back to old probe method for fbdev
+[  1584.203] (II) Loading sub module "fbdevhw"
+[  1584.203] (II) LoadModule: "fbdevhw"
+[  1584.203] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[  1584.204] (II) Module fbdevhw: vendor="X.Org Foundation"
+[  1584.204] 	compiled for 1.21.1.13, module version = 0.0.2
+[  1584.204] 	ABI class: X.Org Video Driver, version 25.2
+[  1584.204] (II) FBDEV(0): using default device
+[  1584.204] (II) FBDEV(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[  1584.205] (==) FBDEV(0): Depth 24, (==) framebuffer bpp 32
+[  1584.205] (==) FBDEV(0): RGB weight 888
+[  1584.205] (==) FBDEV(0): Default visual is TrueColor
+[  1584.205] (==) FBDEV(0): Using gamma correction (1.0, 1.0, 1.0)
+[  1584.205] (II) FBDEV(0): hardware: zynqmp-dpsubdrm (video memory: 6210kB)
+[  1584.205] (DB) xf86MergeOutputClassOptions unsupported bus type 0
+[  1584.205] (II) FBDEV(0): checking modes against framebuffer device...
+[  1584.205] (II) FBDEV(0): checking modes against monitor...
+[  1584.205] (II) FBDEV(0): Virtual size is 1920x1080 (pitch 1920)
+[  1584.205] (**) FBDEV(0):  Built-in mode "current"
+[  1584.205] (==) FBDEV(0): DPI set to (96, 96)
+[  1584.205] (II) Loading sub module "fb"
+[  1584.205] (II) LoadModule: "fb"
+[  1584.205] (II) Module "fb" already built-in
+[  1584.205] (**) FBDEV(0): using shadow framebuffer
+[  1584.205] (II) Loading sub module "shadow"
+[  1584.205] (II) LoadModule: "shadow"
+[  1584.205] (II) Loading /usr/lib/xorg/modules/libshadow.so
+[  1584.206] (II) Module shadow: vendor="X.Org Foundation"
+[  1584.206] 	compiled for 1.21.1.13, module version = 1.1.0
+[  1584.206] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[  1584.206] (II) UnloadModule: "modesetting"
+[  1584.206] (II) Unloading modesetting
+[  1584.207] (EE) FBDEV(0): FBIOPUT_VSCREENINFO: Invalid argument
+[  1584.207] (EE) FBDEV(0): mode initialization failed
+[  1584.207] (EE) 
+Fatal server error:
+[  1584.207] (EE) AddScreen/ScreenInit failed for driver 0
+[  1584.207] (EE) 
+[  1584.207] (EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+[  1584.207] (EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+[  1584.207] (EE) 
+[  1584.370] (EE) Server terminated with error (1). Closing log file.

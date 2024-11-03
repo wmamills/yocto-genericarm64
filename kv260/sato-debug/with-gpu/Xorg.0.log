@@ -1,0 +1,227 @@
+[    21.709] 
+X.Org X Server 1.21.1.13
+X Protocol Version 11, Revision 0
+[    21.709] Current Operating System: Linux genericarm64 6.6.50-yocto-standard #37 SMP PREEMPT Tue Oct 22 15:58:58 EDT 2024 aarch64
+[    21.709] Kernel command line: initrd=\core-image-initramfs-boot-genericarm64.cpio.gz LABEL=Boot root=PARTUUID=0f63dc8a-3641-40de-bf4d-f8bd5c4d678c rootwait rootfstype=ext4
+[    21.709]  
+[    21.709] Current version of pixman: 0.42.2
+[    21.709] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    21.709] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    21.709] (==) Log file: "/var/log/Xorg.0.log", Time: Thu Aug 15 20:59:33 2024
+[    21.710] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    21.710] (==) No Layout section.  Using the first Screen section.
+[    21.710] (==) No screen section available. Using defaults.
+[    21.710] (**) |-->Screen "Default Screen Section" (0)
+[    21.710] (**) |   |-->Monitor "<default monitor>"
+[    21.712] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[    21.712] (**) Allowing byte-swapped clients
+[    21.712] (==) Automatically adding devices
+[    21.712] (==) Automatically enabling devices
+[    21.712] (==) Automatically adding GPU devices
+[    21.712] (==) Automatically binding GPU devices
+[    21.712] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    21.712] (WW) The directory "/usr/share/fonts/X11/misc" does not exist.
+[    21.712] 	Entry deleted from font path.
+[    21.712] (WW) The directory "/usr/share/fonts/X11/TTF" does not exist.
+[    21.712] 	Entry deleted from font path.
+[    21.712] (WW) The directory "/usr/share/fonts/X11/OTF" does not exist.
+[    21.712] 	Entry deleted from font path.
+[    21.712] (WW) The directory "/usr/share/fonts/X11/Type1" does not exist.
+[    21.712] 	Entry deleted from font path.
+[    21.712] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[    21.712] 	Entry deleted from font path.
+[    21.712] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[    21.712] 	Entry deleted from font path.
+[    21.712] (==) FontPath set to:
+	
+[    21.712] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    21.712] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    21.712] (II) Module ABI versions:
+[    21.712] 	X.Org ANSI C Emulation: 0.4
+[    21.713] 	X.Org Video Driver: 25.2
+[    21.713] 	X.Org XInput driver : 24.4
+[    21.713] 	X.Org Server Extension : 10.0
+[    21.715] (--) using VT number 2
+
+[    21.716] (II) systemd-logind: logind integration requires -keeptty and -keeptty was not provided, disabling logind integration
+[    21.721] (II) xfree86: Adding drm device (/dev/dri/card1)
+[    21.722] (II) Platform probe for /sys/devices/platform/axi/fd4a0000.display/drm/card1
+[    21.738] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    21.738] (II) Platform probe for /sys/devices/platform/axi/fd4b0000.gpu/drm/card0
+[    21.738] (II) no primary bus or device found
+[    21.738] 	falling back to /sys/devices/platform/axi/fd4a0000.display/drm/card1
+[    21.738] (II) LoadModule: "glx"
+[    21.740] (WW) Warning, couldn't open module glx
+[    21.740] (EE) Failed to load module "glx" (module does not exist, 0)
+[    21.740] (==) Matched modesetting as autoconfigured driver 0
+[    21.740] (==) Matched fbdev as autoconfigured driver 1
+[    21.740] (==) Assigned the driver to the xf86ConfigLayout
+[    21.740] (II) LoadModule: "modesetting"
+[    21.740] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[    21.745] (II) Module modesetting: vendor="X.Org Foundation"
+[    21.745] 	compiled for 1.21.1.13, module version = 1.21.1
+[    21.745] 	Module class: X.Org Video Driver
+[    21.745] 	ABI class: X.Org Video Driver, version 25.2
+[    21.745] (II) LoadModule: "fbdev"
+[    21.745] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[    21.746] (II) Module fbdev: vendor="X.Org Foundation"
+[    21.746] 	compiled for 1.21.1.13, module version = 0.5.0
+[    21.746] 	Module class: X.Org Video Driver
+[    21.746] 	ABI class: X.Org Video Driver, version 25.2
+[    21.746] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    21.746] (II) FBDEV: driver for framebuffer: fbdev
+[    21.820] (II) modeset(0): using drv /dev/dri/card1
+[    21.820] (WW) Falling back to old probe method for fbdev
+[    21.820] (II) Loading sub module "fbdevhw"
+[    21.820] (II) LoadModule: "fbdevhw"
+[    21.821] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[    21.821] (II) Module fbdevhw: vendor="X.Org Foundation"
+[    21.821] 	compiled for 1.21.1.13, module version = 0.0.2
+[    21.821] 	ABI class: X.Org Video Driver, version 25.2
+[    21.822] (II) modeset(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[    21.822] (==) modeset(0): Depth 24, (==) framebuffer bpp 32
+[    21.822] (==) modeset(0): RGB weight 888
+[    21.822] (==) modeset(0): Default visual is TrueColor
+[    21.822] (II) Loading sub module "glamoregl"
+[    21.822] (II) LoadModule: "glamoregl"
+[    21.823] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    21.844] (II) Module glamoregl: vendor="X.Org Foundation"
+[    21.844] 	compiled for 1.21.1.13, module version = 1.0.1
+[    21.844] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    22.105] (II) modeset(0): glamor X acceleration enabled on softpipe
+[    22.105] (II) modeset(0): glamor initialized
+[    22.105] (==) modeset(0): VariableRefresh: disabled
+[    22.105] (==) modeset(0): AsyncFlipSecondaries: disabled
+[    22.197] (II) modeset(0): Output DP-1 has no monitor section
+[    22.293] (II) modeset(0): EDID for output DP-1
+[    22.293] (II) modeset(0): Manufacturer: XEC  Model: 1000  Serial#: 273
+[    22.293] (II) modeset(0): Year: 2023  Week: 39
+[    22.293] (II) modeset(0): EDID Version: 1.4
+[    22.293] (II) modeset(0): Digital Display Input
+[    22.293] (II) modeset(0): 10 bits per channel
+[    22.293] (II) modeset(0): Digital interface is DisplayPort
+[    22.293] (II) modeset(0): Max Image Size [cm]: horiz.: 53  vert.: 30
+[    22.294] (II) modeset(0): Gamma: 2.20
+[    22.294] (II) modeset(0): DPMS capabilities: Off
+[    22.294] (II) modeset(0): Supported color encodings: RGB 4:4:4 YCrCb 4:4:4 YCrCb 4:2:2
+[    22.294] (II) modeset(0): First detailed timing is preferred mode
+[    22.294] (II) modeset(0): Preferred mode is native pixel format and refresh rate
+[    22.294] (II) modeset(0): Display is continuous-frequency
+[    22.294] (II) modeset(0): redX: 0.661 redY: 0.332   greenX: 0.304 greenY: 0.611
+[    22.294] (II) modeset(0): blueX: 0.149 blueY: 0.064   whiteX: 0.313 whiteY: 0.329
+[    22.294] (II) modeset(0): Supported established timings:
+[    22.294] (II) modeset(0): 640x480@60Hz
+[    22.294] (II) modeset(0): 640x480@72Hz
+[    22.294] (II) modeset(0): 640x480@75Hz
+[    22.294] (II) modeset(0): 800x600@60Hz
+[    22.294] (II) modeset(0): 800x600@72Hz
+[    22.294] (II) modeset(0): 800x600@75Hz
+[    22.294] (II) modeset(0): 1024x768@60Hz
+[    22.294] (II) modeset(0): 1024x768@70Hz
+[    22.294] (II) modeset(0): 1024x768@75Hz
+[    22.294] (II) modeset(0): 1280x1024@75Hz
+[    22.295] (II) modeset(0): Manufacturer's mask: 0
+[    22.295] (II) modeset(0): Supported standard timings:
+[    22.295] (II) modeset(0): #0: hsize: 1152  vsize 864  refresh: 60  vid: 16497
+[    22.295] (II) modeset(0): #1: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[    22.295] (II) modeset(0): #2: hsize: 1600  vsize 900  refresh: 60  vid: 49321
+[    22.295] (II) modeset(0): #3: hsize: 1920  vsize 1080  refresh: 60  vid: 49361
+[    22.295] (II) modeset(0): #4: hsize: 1440  vsize 900  refresh: 60  vid: 149
+[    22.295] (II) modeset(0): #5: hsize: 1680  vsize 1050  refresh: 60  vid: 179
+[    22.295] (II) modeset(0): #6: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    22.295] (II) modeset(0): #7: hsize: 640  vsize 480  refresh: 72  vid: 19505
+[    22.295] (II) modeset(0): Supported detailed timing:
+[    22.295] (II) modeset(0): clock: 148.5 MHz   Image Size:  527 x 296 mm
+[    22.295] (II) modeset(0): h_active: 1920  h_sync: 1968  h_sync_end 2000 h_blank_end 2200 h_border: 0
+[    22.295] (II) modeset(0): v_active: 1080  v_sync: 1083  v_sync_end 1088 v_blanking: 1125 v_border: 0
+[    22.295] (II) modeset(0): Supported detailed timing:
+[    22.295] (II) modeset(0): clock: 185.6 MHz   Image Size:  527 x 296 mm
+[    22.296] (II) modeset(0): h_active: 1920  h_sync: 1968  h_sync_end 2000 h_blank_end 2200 h_border: 0
+[    22.296] (II) modeset(0): v_active: 1080  v_sync: 1083  v_sync_end 1088 v_blanking: 1125 v_border: 0
+[    22.296] (II) modeset(0): Monitor name: ES-24X5A
+[    22.296] (II) modeset(0): Ranges: V min: 48 V max: 75 Hz, H min: 120 H max: 120 kHz, PixClock max 325 MHz
+[    22.296] (II) modeset(0): Supported detailed timing:
+[    22.296] (II) modeset(0): clock: 148.5 MHz   Image Size:  527 x 296 mm
+[    22.296] (II) modeset(0): h_active: 1920  h_sync: 1968  h_sync_end 2000 h_blank_end 2200 h_border: 0
+[    22.296] (II) modeset(0): v_active: 1080  v_sync: 1083  v_sync_end 1088 v_blanking: 1125 v_border: 0
+[    22.296] (II) modeset(0): Supported detailed timing:
+[    22.296] (II) modeset(0): clock: 74.4 MHz   Image Size:  527 x 296 mm
+[    22.296] (II) modeset(0): h_active: 1366  h_sync: 1414  h_sync_end 1446 h_blank_end 1526 h_border: 0
+[    22.296] (II) modeset(0): v_active: 768  v_sync: 771  v_sync_end 781 v_blanking: 813 v_border: 0
+[    22.296] (II) modeset(0): Number of EDID sections to follow: 1
+[    22.296] (II) modeset(0): EDID (in hex):
+[    22.297] (II) modeset(0): 	00ffffffffffff0060a3001011010000
+[    22.297] (II) modeset(0): 	27210104b5351e78394e65a9554d9c26
+[    22.297] (II) modeset(0): 	1050542dcf0071408180a9c0d1c09500
+[    22.297] (II) modeset(0): 	b30081c0314c023a801871382d403020
+[    22.297] (II) modeset(0): 	35000f282100001a8348801871382d40
+[    22.297] (II) modeset(0): 	302035000f282100001a000000fc0045
+[    22.297] (II) modeset(0): 	532d32345835410a20202020000000fd
+[    22.297] (II) modeset(0): 	00304b787820010a2020202020200195
+[    22.297] (II) modeset(0): 	02031df448101f04130501030223097f
+[    22.297] (II) modeset(0): 	078301000067030c0010001840023a80
+[    22.297] (II) modeset(0): 	1871382d40302035000f282100001a14
+[    22.297] (II) modeset(0): 	1d56a050002d3030203a000f28210000
+[    22.298] (II) modeset(0): 	1a000000000000000000000000000000
+[    22.298] (II) modeset(0): 	00000000000000000000000000000000
+[    22.298] (II) modeset(0): 	00000000000000000000000000000000
+[    22.298] (II) modeset(0): 	0000000000000000000000000000008c
+[    22.298] (--) modeset(0): HDMI max TMDS frequency 320000KHz
+[    22.298] (II) modeset(0): Printing probed modes for output DP-1
+[    22.299] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 1968 2000 2200  1080 1083 1088 1125 +hsync -vsync (67.5 kHz eP)
+[    22.299] (II) modeset(0): Modeline "1920x1080"x75.0  185.63  1920 1968 2000 2200  1080 1083 1088 1125 +hsync -vsync (84.4 kHz e)
+[    22.299] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    22.299] (II) modeset(0): Modeline "1920x1080"x50.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    22.299] (II) modeset(0): Modeline "1920x1080"x59.9  148.35  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.4 kHz e)
+[    22.299] (II) modeset(0): Modeline "1680x1050"x60.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[    22.299] (II) modeset(0): Modeline "1600x900"x60.0  108.00  1600 1624 1704 1800  900 901 904 1000 +hsync +vsync (60.0 kHz e)
+[    22.299] (II) modeset(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    22.299] (II) modeset(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    22.299] (II) modeset(0): Modeline "1440x900"x59.9  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[    22.300] (II) modeset(0): Modeline "1366x768"x60.0   74.44  1366 1414 1446 1526  768 771 781 813 +hsync -vsync (48.8 kHz e)
+[    22.300] (II) modeset(0): Modeline "1152x864"x60.0   81.77  1152 1216 1336 1520  864 867 871 897 -hsync +vsync (53.8 kHz)
+[    22.300] (II) modeset(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    22.300] (II) modeset(0): Modeline "1280x720"x50.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    22.300] (II) modeset(0): Modeline "1280x720"x59.9   74.18  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    22.300] (II) modeset(0): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    22.300] (II) modeset(0): Modeline "1024x768"x70.1   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[    22.300] (II) modeset(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    22.300] (II) modeset(0): Modeline "800x600"x72.2   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[    22.300] (II) modeset(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    22.300] (II) modeset(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    22.301] (II) modeset(0): Modeline "720x480"x60.0   27.03  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    22.301] (II) modeset(0): Modeline "720x480"x59.9   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    22.301] (II) modeset(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    22.301] (II) modeset(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    22.301] (II) modeset(0): Modeline "640x480"x72.0   29.55  640 664 728 816  480 483 487 503 -hsync +vsync (36.2 kHz)
+[    22.301] (II) modeset(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    22.301] (II) modeset(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    22.301] (II) modeset(0): Output DP-1 connected
+[    22.301] (II) modeset(0): Using exact sizes for initial modes
+[    22.301] (II) modeset(0): Output DP-1 using initial mode 1920x1080 +0+0
+[    22.301] (==) modeset(0): Using gamma correction (1.0, 1.0, 1.0)
+[    22.301] (==) modeset(0): DPI set to (96, 96)
+[    22.302] (II) Loading sub module "fb"
+[    22.302] (II) LoadModule: "fb"
+[    22.302] (II) Module "fb" already built-in
+[    22.302] (II) UnloadModule: "fbdev"
+[    22.302] (II) Unloading fbdev
+[    22.302] (II) UnloadSubModule: "fbdevhw"
+[    22.302] (II) Unloading fbdevhw
+[    22.303] (EE) 
+Fatal server error:
+[    22.303] (EE) AddScreen/ScreenInit failed for driver 0
+[    22.304] (EE) 
+[    22.304] (EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+[    22.304] (EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+[    22.304] (EE) 
+[    22.452] (EE) Server terminated with error (1). Closing log file.

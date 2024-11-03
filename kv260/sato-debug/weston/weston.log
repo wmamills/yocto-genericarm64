@@ -1,0 +1,92 @@
+Date: 2024-08-15 UTC
+[21:14:54.037] weston 13.0.3
+               https://wayland.freedesktop.org
+               Bug reports to: https://gitlab.freedesktop.org/wayland/weston/issues/
+               Build: 13.0.3
+[21:14:54.037] Command line: /usr/bin/weston
+[21:14:54.037] OS: Linux, 6.6.50-yocto-standard, #39 SMP PREEMPT Thu Oct 24 15:57:51 EDT 2024, aarch64
+[21:14:54.037] Flight recorder: enabled
+[21:14:54.038] Using config file '/etc/xdg/weston/weston.ini'
+[21:14:54.039] Output repaint window is 7 ms maximum.
+[21:14:54.039] Loading module '/usr/lib/libweston-13/drm-backend.so'
+[21:14:54.054] initializing drm backend
+[21:14:54.054] Trying libseat launcher...
+[21:14:54.055] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:64] Could not connect to socket /run/seatd.sock: No such file or directory
+[21:14:54.055] [c/debug/seatd/0.8.0/libseat/libseat.c:76] Backend 'seatd' failed to open seat, skipping
+[21:14:54.058] [c/debug/seatd/0.8.0/libseat/libseat.c:76] Backend 'logind' failed to open seat, skipping
+[21:14:54.064] [c/debug/seatd/0.8.0/seatd/seat.c:39] Created VT-bound seat seat0
+[21:14:54.064] [c/debug/seatd/0.8.0/seatd/server.c:145] New client connected (pid: 627, uid: 0, gid: 0)
+[21:14:54.064] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:633] Started embedded seatd
+[21:14:54.065] [c/debug/seatd/0.8.0/seatd/seat.c:170] Added client 7 to seat0
+[21:14:54.065] [c/debug/seatd/0.8.0/seatd/seat.c:480] Opened client 7 on seat0
+[21:14:54.065] [c/debug/seatd/0.8.0/libseat/libseat.c:73] Seat opened with backend 'builtin'
+[21:14:54.065] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:212] Enabling seat
+[21:14:54.065] libseat: session control granted
+[21:14:54.084] using /dev/dri/card1
+[21:14:54.084] DRM: supports atomic modesetting
+[21:14:54.084] DRM: supports GBM modifiers
+[21:14:54.084] DRM: does not support async page flipping
+[21:14:54.084] DRM: supports picture aspect ratio
+MESA-LOADER: failed to open zynqmp-dpsub: /usr/lib/dri/zynqmp-dpsub_dri.so: cannot open shared object file: No such file or directory (search paths /usr/lib/dri, suffix _dri)
+[21:14:54.136] Loading module '/usr/lib/libweston-13/gl-renderer.so'
+[21:14:54.146] warning: failed to query rendering device from EGL
+[21:14:54.146] EGL version: 1.4
+[21:14:54.146] EGL vendor: Mesa Project
+[21:14:54.146] EGL client APIs: OpenGL OpenGL_ES 
+[21:14:54.146] warning: Disabling render GPU timeline and explicit synchronization due to missing EGL_ANDROID_native_fence_sync extension
+[21:14:54.146] EGL features:
+               EGL Wayland extension: no
+               context priority: no
+               buffer age: yes
+               partial update: no
+               swap buffers with damage: no
+               configless context: yes
+               surfaceless context: yes
+               dmabuf support: modifiers
+[21:14:54.326] GL version: OpenGL ES 3.1 Mesa 24.0.7
+[21:14:54.326] GLSL version: OpenGL ES GLSL ES 3.10
+[21:14:54.326] GL vendor: Mesa
+[21:14:54.326] GL renderer: softpipe
+[21:14:54.397] GL ES 3.1 - renderer features:
+               read-back format: ARGB8888
+               glReadPixels supports y-flip: yes
+               wl_shm 10 bpc formats: yes
+               wl_shm 16 bpc formats: yes
+               wl_shm half-float formats: yes
+               internal R and RG formats: yes
+               OES_EGL_image_external: yes
+[21:14:54.397] Using GL renderer
+[21:14:54.452] event1  - Logitech USB Receiver: is tagged by udev as: Keyboard
+[21:14:54.454] event1  - Logitech USB Receiver: device is a keyboard
+[21:14:54.471] event2  - Logitech USB Receiver Mouse: is tagged by udev as: Mouse
+[21:14:54.472] event2  - Logitech USB Receiver Mouse: device is a pointer
+[21:14:54.490] event3  - Logitech USB Receiver Consumer Control: is tagged by udev as: Keyboard
+[21:14:54.490] event3  - Logitech USB Receiver Consumer Control: device is a keyboard
+[21:14:54.507] event4  - Logitech USB Receiver System Control: is tagged by udev as: Keyboard
+[21:14:54.508] event4  - Logitech USB Receiver System Control: device is a keyboard
+[21:14:54.515] event0  - gpio-keys: not tagged as supported input device
+[21:14:54.561] event0  - not using input device '/dev/input/event0'
+[21:14:54.606] libinput: configuring device "Logitech USB Receiver".
+[21:14:54.606] libinput: configuring device "Logitech USB Receiver Mouse".
+[21:14:54.606] libinput: configuring device "Logitech USB Receiver Consumer Control".
+[21:14:54.606] libinput: configuring device "Logitech USB Receiver System Control".
+[21:14:54.702] DRM: head 'DP-1' found, connector 40 is connected, EDID make 'XEC', model 'ES-24X5A', serial ''
+               Supported EOTF modes: SDR
+[21:14:54.703] Registered plugin API 'weston_drm_output_api_v1' of size 40
+[21:14:54.703] Color manager: no-op
+[21:14:54.704] Output 'DP-1' attempts EOTF mode: SDR
+[21:14:54.705] Output 'DP-1' using color profile: stock sRGB color profile
+[21:14:54.705] format XRGB8888 not supported by output DP-1
+[21:14:54.706] failed to create gbm surface
+[21:14:54.706] Failed to init output gl state
+[21:14:54.706] Enabling output "DP-1" failed.
+[21:14:54.706] Error: cannot enable output 'DP-1' without heads.
+[21:14:54.712] event1  - Logitech USB Receiver: device removed
+[21:14:54.733] event2  - Logitech USB Receiver Mouse: device removed
+[21:14:54.765] event3  - Logitech USB Receiver Consumer Control: device removed
+[21:14:54.781] event4  - Logitech USB Receiver System Control: device removed
+[21:14:54.928] [c/debug/seatd/0.8.0/seatd/seat.c:418] No clients on seat0 to activate
+[21:14:55.034] [c/debug/seatd/0.8.0/seatd/seat.c:524] Closed client 7 on seat0
+[21:14:55.034] [c/debug/seatd/0.8.0/seatd/seat.c:192] Removed client 7 from seat0
+[21:14:55.034] [c/debug/seatd/0.8.0/seatd/client.c:471] Client disconnected
+[21:14:55.034] [c/debug/seatd/0.8.0/libseat/backend/seatd.c:645] Stopped embedded seatd
