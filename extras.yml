@@ -1,0 +1,26 @@
+header:
+  version: 9
+
+build_system: oe
+
+env:
+  BB_LOGCONFIG: ""
+  TOOLCHAIN_DIR: ""
+
+local_conf_header:
+  base: |
+    CONF_VERSION = "2"
+    BB_GENERATE_MIRROR_TARBALLS = "1"
+    BB_GIT_SHALLOW = "1"
+    BB_GIT_SHALLOW_DEPTH = "1"
+    PACKAGE_CLASSES = "package_ipk"
+    PACKAGECONFIG:remove:pn-qemu-system-native = "gtk+ sdl"
+    USER_CLASSES ?= "buildstats"
+    IMAGE_FSTYPES:append = " cpio.gz"
+    IMAGE_FSTYPES:remove = "jffs2"
+  extra-packages: |
+    PACKAGE_INSTALL_EXTRAS = "rsync iproute2 dropbear kernel-modules"
+    IMAGE_INSTALL:append = " ${PACKAGE_INSTALL_EXTRAS} "
+    EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-dropbear"
+
+machine: unset

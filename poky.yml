@@ -1,5 +1,7 @@
 header:
   version: 9
+  includes:
+    - extras.yml
 
 build_system: oe
 distro: poky
@@ -18,14 +20,8 @@ repos:
     url: https://git.yoctoproject.org/git/poky
     #refspec: master
 
-    # 5.0.x tip
-    # refspec: scarthgap
-
-    # 5.1 tag
-    refspec: yocto-5.1
-
-    # Head commit as of April 3 (not taged as 5.0 M4 yet
-    # refspec: 30d88a20432d2ddca555c9b6690450b260e523ec
+    # 5.0.6 latest 5.0.x release as of 2025-03-04
+    refspec: yocto-5.0.6
 
     layers:
       meta:
@@ -39,7 +35,7 @@ env:
 local_conf_header:
   base: |
     CONF_VERSION = "2"
-    DISTRO = "poky-altcfg"
+    DISTRO = "poky"
     IMAGE_FSTYPES:append = " tar.gz"
     EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-dropbear"
     IMAGE_INSTALL:append = " mtd-utils rng-tools alsa-utils-speakertest"
