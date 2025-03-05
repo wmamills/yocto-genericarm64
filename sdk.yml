@@ -1,0 +1,12 @@
+header:
+  version: 9
+
+build_system: oe
+
+local_conf_header:
+  sdk-extra-packages: |
+    PACKAGE_INSTALL_EXTRAS = "qemu"
+    IMAGE_INSTALL:append = " ${PACKAGE_INSTALL_EXTRAS} "
+
+target: core-image-base
+task: populate_sdk
