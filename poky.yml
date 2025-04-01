@@ -21,11 +21,8 @@ repos:
     # 5.0.x tip
     # refspec: scarthgap
 
-    # 5.1 tag
-    refspec: yocto-5.1
-
-    # Head commit as of April 3 (not taged as 5.0 M4 yet
-    # refspec: 30d88a20432d2ddca555c9b6690450b260e523ec
+    # 5.2 walnascar, commit as of 2025-04-01
+    refspec: e894acce6ede8bedafc1859ea0345ee6d80e9c74
 
     layers:
       meta:
@@ -41,7 +38,7 @@ local_conf_header:
     CONF_VERSION = "2"
     DISTRO = "poky-altcfg"
     IMAGE_FSTYPES:append = " tar.gz"
-    EXTRA_IMAGE_FEATURES:append = " debug-tweaks ssh-server-dropbear"
+    EXTRA_IMAGE_FEATURES:append = " allow-empty-password allow-root-login empty-root-password ssh-server-dropbear"
     IMAGE_INSTALL:append = " mtd-utils rng-tools alsa-utils-speakertest"
     USER_CLASSES ?= "buildstats"
 
